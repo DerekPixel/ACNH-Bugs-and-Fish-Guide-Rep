@@ -1,374 +1,2137 @@
-export {bugs};
-//#region bugs
-const bugs = {
-    commonButterfly: {
-    name:"Common Butterfly",
-    picture: './assets/images/bugs/NH-Icon-commonbutterfly.png',
-    price:"160",
-    location:"Flying",
-    time:"4:00 am - 7:00 pm",
-    months: 'Sep - Jun',
-    notes:""
+export {animals};
+
+const animals = {
+    //#region bugs
+    bugs: {
+        commonButterfly: {
+        name:"Common Butterfly",
+        picture: './assets/images/bugs/NH-Icon-commonbutterfly.png',
+        price:"160",
+        location:"Flying",
+        time:"4:00 am - 7:00 pm",
+        months: 'Sep - Jun',
+        southernMonths: 'Mar - Dec',
+        notes:""
+        },
+        yellowButterfly: {
+        name:"Yellow Butterfly",
+        picture: './assets/images/bugs/NH-Icon-yellowbutterfly.png',
+        price:"160",
+        location:"Flying",
+        time:"4:00 am - 7:00 pm",
+        months: 'Mar - Jun & Sep - Oct',
+        southernMonths: 'Mar - Apr & Sep - Dec',
+        notes:""
+        },
+        tigerButterfly: {
+        name:"Tiger Butterfly",
+        picture: './assets/images/bugs/NH-Icon-tigerbutterfly.png',
+        price:"240",
+        location:"Flying",
+        time:"4:00 am - 7:00 pm",
+        months: 'Mar - Sep',
+        southernMonths: 'Sep - Mar',
+        notes:""
+        },
+        peacockButterfly: {
+        name:"Peacock Butterfly",
+        picture: './assets/images/bugs/NH-Icon-peacockbutterfly.png',
+        price:"2500",
+        location:"Flying by Hybrid Flowers",
+        time:"4:00 am - 7:00 pm",
+        months: 'Mar - Jun',
+        southernMonths: 'Sep - Dec',
+        notes:"Purple, Black and Blue Flowers."
+        },
+        commonBluebottle: {
+        name:"Common Bluebottle",
+        picture: './assets/images/bugs/NH-Icon-commonbluebottle.png',
+        price:"300",
+        location:"Flying",
+        time:"4:00 am - 7:00 pm",
+        months: 'Apr - Aug',
+        southernMonths: 'Oct - Feb',
+        notes:""
+        },
+        paperKiteButterfly: {
+        name: 'Paper Kite Butterfly',
+        picture: './assets/images/bugs/NH-Icon-paperkitebutterfly.png',
+        price: '1000',
+        location: 'Flying',
+        time: '8:00 am - 7:00 pm',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        greatPurpleEmperor: {
+        name: 'Great Purple Emperor',
+        picture: './assets/images/bugs/NH-Icon-greatpurpleemperor.png',
+        price: '3000',
+        location: 'Flying',
+        time: '4:00 am - 7:00 pm',
+        months: 'May - Aug',
+        southernMonths: 'Nov - Feb',
+        notes: ''
+        },
+        monarchButterfly: {
+        name: 'Monarch Butterfly',
+        picture: './assets/images/bugs/NH-Icon-monarchbutterfly.png',
+        price: '140',
+        location: 'Flying',
+        time: '4:00 am - 5:00 pm',
+        months: 'Sep - Nov',
+        southernMonths: 'Mar - May',
+        notes: ''
+        },
+        emperorButterfly: {
+        name: 'Emperor Butterfly',
+        picture: './assets/images/bugs/NH-Icon-emperorbutterfly.png',
+        price: '4000',
+        location: 'Flying',
+        time: '5:00 pm - 8:00 am',
+        months: 'Dec - Mar & Jun - Sep',
+        southernMonths: 'Jun - Sep & Dec - Mar',
+        notes: ''
+        },
+        agriasButterfly: {
+        name: 'Agrias Butterfly',
+        picture: './assets/images/bugs/NH-Icon-agriasbutterfly.png',
+        price: '3000',
+        location: 'Flying',
+        time: '8:00 am - 5:00 pm',
+        months: 'Apr - Sep',
+        southernMonths: 'Oct - Mar',
+        notes: ''
+        },
+        rajahBrookesBirdwing: {
+        name: "Rajah Brooke's Birdwing",
+        picture: './assets/images/bugs/NH-Icon-rajahbrookesbirdwing.png',
+        price: '2500',
+        location: 'Flying',
+        time: '8:00 am - 5:00 pm',
+        months: 'Dec - Feb & Apr - Sep',
+        southernMonths: 'Jun - Aug & Oct - Mar',
+        notes: ''
+        },
+        queenAlexandrasBirdwing: {
+        name: "Queen Alexandra's Birdwing",
+        picture: './assets/images/bugs/NH-Icon-queenalexandrasbirdwing.png',
+        price: '4000',
+        location: 'Flying',
+        time: '8:00 am - 4:00 pm',
+        months: 'May - Sep',
+        southernMonths: 'Nov - Mar',
+        notes: ''
+        },
+        moth: {
+        name: 'Moth',
+        picture: './assets/images/bugs/NH-Icon-moth.png',
+        price: '130',
+        location: 'Flying by lights',
+        time: '7:00 pm - 4:00 am',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        atlasMoth: {
+        name: 'Atlas Moth',
+        picture: './assets/images/bugs/NH-Icon-atlasmoth.png',
+        price: '3000',
+        location: 'On trees',
+        time: '7:00 pm - 4:00 am',
+        months: 'Apr - Sep',
+        southernMonths: 'Oct - Mar',
+        notes: ''
+        },
+        madagacanSunsetMoth: {
+        name: 'Madagascan Sunset Moth',
+        picture: './assets/images/bugs/NH-Icon-madagascansunsetmoth.png',
+        price: '2500',
+        location: 'Flying',
+        time: '8:00 am - 7:00 pm',
+        months: 'Apr - Sep',
+        southernMonths: 'Oct - Mar',
+        notes: ''
+        },
+        longLocust: {
+        name: 'Long Locust',
+        picture: './assets/images/bugs/NH-Icon-longlocust.png',
+        price: '200',
+        location: 'On the ground',
+        time: '8:00 am - 7:00 pm',
+        months: 'Apr - Nov',
+        southernMonths: 'Oct - May',
+        notes: ''
+        },
+        migratoryLocust: {
+        name: 'Migratory Locust',
+        picture: './assets/images/bugs/NH-Icon-migratorylocust.png',
+        price: '600',
+        location: 'On the ground',
+        time: '8:00 am - 7:00 pm',
+        months: 'Aug - Nov',
+        southernMonths: 'Feb - May',
+        notes: ''
+        },
+        riceGrasshopper: {
+        name: 'Rice Grasshopper',
+        picture: './assets/images/bugs/NH-Icon-ricegrasshopper.png',
+        price: '160',
+        location: 'On the ground',
+        time: '8:00 am - 7:00 pm',
+        months: 'Aug - Nov',
+        southernMonths: 'Feb - May',
+        notes: ''
+        },
+        grasshopper: {
+        name: 'Grasshopper',
+        picture: './assets/images/bugs/NH-Icon-grasshopper.png',
+        price: '160',
+        location: 'On the ground',
+        time: '8:00 am - 7:00 pm',
+        months: 'Jul - Sep',
+        southernMonths: 'Jan - Mar',
+        notes: ''
+        },
+        cricket: {
+        name: 'Cricket',
+        picture: './assets/images/bugs/NH-Icon-cricket.png',
+        price: '130',
+        location: 'On the ground',
+        time: '5:00 pm - 8:00 am',
+        months: 'Sep - Nov',
+        southernMonths: 'Mar - May',
+        notes: ''
+        },
+        bellCricket: {
+        name: 'Bell Cricket',
+        picture: './assets/images/bugs/NH-Icon-bellcricket.png',
+        price: '430',
+        location: 'On the ground',
+        time: '5:00 pm - 8:00 am',
+        months: 'Sep - Oct',
+        southernMonths: 'Mar - Apr',
+        notes: ''
+        },
+        mantis: {
+        name: 'Mantis',
+        picture: './assets/images/bugs/NH-Icon-mantis.png',
+        price: '430',
+        location: 'On Flowers',
+        time: '8:00 am - 5:00 pm',
+        months: 'Mar - Nov',
+        southernMonths: 'Sep - May',
+        notes: ''
+        },
+        orchidMantis: {
+        name: 'Orchid Mantis',
+        picture: './assets/images/bugs/NH-Icon-orchidmantis.png',
+        price: '2400',
+        location: 'On Flowers (White)',
+        time: '8:00 am - 5:00 pm',
+        months: 'Mar - Nov',
+        southernMonths: 'Sep - May',
+        notes: ''
+        },
+        honeyBee: {
+        name: 'Honey Bee',
+        picture: './assets/images/bugs/NH-Icon-honeybee.png',
+        price: '200',
+        location: 'Flying',
+        time: '8:00 am - 5:00 pm',
+        months: 'Mar - Jul',
+        southernMonths: 'Sep - Jan',
+        notes: ''
+        },
+        wasp: {
+        name: 'Wasp',
+        picture: './assets/images/bugs/NH-Icon-wasp.png',
+        price: '2500',
+        location: 'Shaking trees',
+        time: 'all day',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        brownCicada: {
+        name: 'Brown Cicada',
+        picture: './assets/images/bugs/NH-Icon-browncicada.png',
+        price: '250',
+        location: 'On trees',
+        time: '8:00 am - 5:00 pm',
+        months: 'Jul - Aug',
+        southernMonths: 'Jan - Feb',
+        notes: ''
+        },
+        robustCicada: {
+        name: 'Robust Cicada',
+        picture: './assets/images/bugs/NH-Icon-robustcicada.png',
+        price: '300',
+        location: 'On trees',
+        time: '8:00 am - 5:00 pm',
+        months: 'Jul - Aug',
+        southernMonths: 'Jan - Feb',
+        notes: ''
+        },
+        giantCicada: {
+        name: 'Giant Cicada',
+        picture: './assets/images/bugs/NH-Icon-giantcicada.png',
+        price: '500',
+        location: 'On trees',
+        time: '8:00 am - 5:00 pm',
+        months: 'Jul - Aug',
+        southernMonths: 'Jan - Feb',
+        notes: ''
+        },
+        walkerCicada: {
+        name: 'Walker Cicada',
+        picture: './assets/images/bugs/NH-Icon-walkercicada.png',
+        price: '400',
+        location: 'On trees',
+        time: '8:00 am - 5:00 pm',
+        months: 'Aug - Sep',
+        southernMonths: 'Feb - Mar',
+        notes: ''
+        },
+        eveningCicada: {
+        name: 'Evening Cicada',
+        picture: './assets/images/bugs/NH-Icon-eveningcicada.png',
+        price: '550',
+        location: 'On trees',
+        time: '4:00 am - 8:00 am & 4:00 pm - 7:00 pm',
+        months: 'Jul - Aug',
+        southernMonths: 'Jan - Feb',
+        notes: ''
+        },
+        cicadaShell: {
+        name: 'Cicada Shell',
+        picture: './assets/images/bugs/NH-Icon-cicadashell.png',
+        price: '10',
+        location: 'On trees',
+        time: 'all day',
+        months: 'Jul - Aug',
+        southernMonths: 'Jan - Feb',
+        notes: ''
+        },
+        redDragonfly: {
+        name: 'Red Dragonfly',
+        picture: './assets/images/bugs/NH-Icon-reddragonfly.png',
+        price: '180',
+        location: 'Flying',
+        time: '8:00 am - 7:00 pm',
+        months: 'Sep - Oct',
+        southernMonths: 'Mar - Apr',
+        notes: ''
+        },
+        darnerDragonfly: {
+        name: 'Darner Dragonfly',
+        picture: './assets/images/bugs/NH-Icon-darnerdragonfly.png',
+        price: '230',
+        location: 'Flying',
+        time: '8:00 am - 5:00 pm',
+        months: 'Apr - Oct',
+        southernMonths: 'Oct - Apr',
+        notes: ''
+        },
+        bandedDragonfly: {
+        name: 'Banded Dragonfly',
+        picture: './assets/images/bugs/NH-Icon-bandeddragonfly.png',
+        price: '4500',
+        location: 'Flying',
+        time: '8:00 am - 5:00 pm',
+        months: 'May - Oct',
+        southernMonths: 'Nov - Apr',
+        notes: ''
+        },
+        damselfly: {
+        name: 'Damselfly',
+        picture: './assets/images/bugs/NH-Icon-damselfly.png',
+        price: '500',
+        location: 'Flying',
+        time: 'all day',
+        months: 'Nov - Feb',
+        southernMonths: 'May - Aug',
+        notes: ''
+        },
+        firefly: {
+        name: 'Firefly',
+        picture: './assets/images/bugs/NH-Icon-firefly.png',
+        price: '300',
+        location: 'Flying',
+        time: '7:00 pm - 4:00 am',
+        months: 'Jun',
+        southernMonths: 'Dec',
+        notes: ''
+        },
+        moleCricket: {
+        name: 'Mole Cricket',
+        picture: './assets/images/bugs/NH-Icon-molecricket.png',
+        price: '500',
+        location: 'Underground',
+        time: 'all day',
+        months: 'Nov - May',
+        southernMonths: 'May - Nov',
+        notes: ''
+        },
+        pondskater: {
+        name: 'Pondskater',
+        picture: './assets/images/bugs/NH-Icon-pondskater.png',
+        price: '130',
+        location: 'On Ponds and Rivers',
+        time: '8:00 am - 7:00 pm',
+        months: 'May - Sep',
+        southernMonths: 'Nov - Mar',
+        notes: ''
+        },
+        divingBeetle: {
+        name: 'Diving Beetle',
+        picture: './assets/images/bugs/NH-Icon-divingbeetle.png',
+        price: '800',
+        location: 'On Ponds and Rivers',
+        time: '8:00 am - 7:00 pm',
+        months: 'May - Sep',
+        southernMonths: 'Nov - Mar',
+        notes: ''
+        },
+        giantWaterBug: {
+        name: 'Giant Water Bug',
+        picture: './assets/images/bugs/NH-Icon-giantwaterbug.png',
+        price: '2000',
+        location: 'On Ponds and Rivers',
+        time: '7:00 pm - 8:00 am',
+        months: 'Apr - Sep',
+        southernMonths: 'Oct - Mar',
+        notes: ''
+        },
+        stinkbug: {
+        name: 'Stinkbug',
+        picture: './assets/images/bugs/NH-Icon-stinkbug.png',
+        price: '120',
+        location: 'On Flowers',
+        time: 'all day',
+        months: 'Mar - Oct',
+        southernMonths: 'Sep - Apr',
+        notes: ''
+        },
+        manFacedStinkbug: {
+        name: 'Man-Faced Stinkbug',
+        picture: './assets/images/bugs/NH-Icon-manfacedstinkbug.png',
+        price: '1000',
+        location: 'On Flowers',
+        time: '7:00 pm - 8:00 am',
+        months: 'Mar - Oct',
+        southernMonths: 'Sep - Apr',
+        notes: ''
+        },
+        ladybug: {
+        name: 'Ladybug',
+        picture: './assets/images/bugs/NH-Icon-ladybug.png',
+        price: '200',
+        location: 'On Flowers',
+        time: '8:00 am - 5:00 pm',
+        months: 'Mar - Jun & Sep',
+        southernMonths: 'Apr & Sep Dec',
+        notes: ''
+        },
+        tigerBeetle: {
+        name: 'Tiger Beetle',
+        picture: './assets/images/bugs/NH-Icon-tigerbeetle.png',
+        price: '1500',
+        location: 'On the Ground',
+        time: 'All Day',
+        months: 'Feb - Oct',
+        southernMonths: 'Aug - Apr',
+        notes: ''
+        },
+        jewelBeetle: {
+        name: 'Jewel Beetle',
+        picture: './assets/images/bugs/NH-Icon-jewelbeetle.png',
+        price: '2400',
+        location: 'On tree stumps',
+        time: 'All Day',
+        months: 'Apr - Aug',
+        southernMonths: 'Oct - Feb',
+        notes: ''
+        },
+        violinBeetle: {
+        name: 'Violin Beetle',
+        picture: './assets/images/bugs/NH-Icon-violinbeetle.png',
+        price: '450',
+        location: 'On tree stumps',
+        time: 'All Day',
+        months: 'May - Jun & Sep - Nov',
+        southernMonths: 'Mar - May & Nov - Dec',
+        notes: ''
+        },
+        citrusLongHornedBeetle: {
+        name: 'Citrus Long-Horned Beetle',
+        picture: './assets/images/bugs/NH-Icon-citruslonghornedbeetle.png',
+        price: '350',
+        location: 'On tree stumps',
+        time: 'All Day',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        rosaliaBatesiBeetle: {
+        name: 'Rosalia Batesi Beetle',
+        picture: './assets/images/bugs/NH-Icon-rosaliabatesibeetle.png',
+        price: '3000',
+        location: 'On tree stumps',
+        time: 'All Day',
+        months: 'May - Sep',
+        southernMonths: 'Nov - Feb',
+        notes: ''
+        },
+        blueWeevilBeetle: {
+        name: 'Blue Weevil Beetle',
+        picture: './assets/images/bugs/NH-Icon-blueweevilbeetle.png',
+        price: '800',
+        location: 'On coconut trees',
+        time: 'All Day',
+        months: 'Jul - Aug',
+        southernMonths: 'Jan - Feb',
+        notes: ''
+        },
+        dungBeetle: {
+        name: 'Dung Beetle',
+        picture: './assets/images/bugs/NH-Icon-dungbeetle.png',
+        price: '3000',
+        location: 'On the ground rolling snowballs',
+        time: 'All Day',
+        months: 'Dec - Feb',
+        southernMonths: 'Jun - Aug',
+        notes: ''
+        },
+        earthboringDungBettle: {
+        name: 'Earth-Boring Dung Beetle',
+        picture: './assets/images/bugs/NH-Icon-earthboringdungbeetle.png',
+        price: '300',
+        location: 'On the ground',
+        time: 'All Day',
+        months: 'Jul - Sep',
+        southernMonths: 'Jan - Mar',
+        notes: ''
+        },
+        scarabBeetle: {
+        name: 'Scarab Beetle',
+        picture: './assets/images/bugs/NH-Icon-scarabbeetle.png',
+        price: '10000',
+        location: 'On trees',
+        time: '11:00 pm - 8:00 am',
+        months: 'Jul - Aug',
+        southernMonths: 'Jan - Feb',
+        notes: ''
+        },
+        droneBeetle: {
+        name: 'Drone Beetle',
+        picture: './assets/images/bugs/NH-Icon-dronebeetle.png',
+        price: '200',
+        location: 'On trees',
+        time: 'All Day',
+        months: 'Jun - Aug',
+        southernMonths: 'Dec - Feb',
+        notes: ''
+        },
+        goliathBeetle: {
+        name: 'Goliath Beetle',
+        picture: './assets/images/bugs/NH-Icon-goliathbeetle.png',
+        price: '8000',
+        location: 'On coconut trees',
+        time: '5:00 pm - 8:00 am',
+        months: 'Jun - Sep',
+        southernMonths: 'Dec - Mar',
+        notes: ''
+        },
+        sawStag: {
+        name: 'Saw Stag',
+        picture: './assets/images/bugs/NH-Icon-sawstag.png',
+        price: '2000',
+        location: 'On trees',
+        time: 'All Day',
+        months: 'Jul - Aug',
+        southernMonths: 'Jan - Feb',
+        notes: ''
+        },
+        miyamaSta: {
+        name: 'Miyama Stag',
+        picture: './assets/images/bugs/NH-Icon-miyamastag.png',
+        price: '1000',
+        location: 'On trees',
+        time: 'All Day',
+        months: 'Jul - Aug',
+        southernMonths: 'Jan - Feb',
+        notes: ''
+        },
+        giantStag: {
+        name: 'Giant Stag',
+        picture: './assets/images/bugs/NH-Icon-giantstag.png',
+        price: '10000',
+        location: 'On trees',
+        time: '11:00 pm - 8:00 am',
+        months: 'Jul - Aug',
+        southernMonths: 'Jan - Feb',
+        notes: ''
+        },
+        rainbowStag: {
+        name: 'Rainbow Stag',
+        picture: './assets/images/bugs/NH-Icon-rainbowstag.png',
+        price: '6000',
+        location: 'on trees',
+        time: '7:00 pm - 8:00 am',
+        months: 'Jun - Sep',
+        southernMonths: 'Dec - Mar',
+        notes: ''
+        },
+        cyclommatusStag: {
+        name: 'Cyclommatus Stag',
+        picture: './assets/images/bugs/NH-Icon-cyclommatusstag.png',
+        price: '8000',
+        location: 'On coconut trees',
+        time: '5:00 pm - 8:00 am',
+        months: 'Jul - Aug',
+        southernMonths: 'Jan - Feb',
+        notes: ''
+        },
+        goldenStag: {
+        name: 'Golden Stag',
+        picture: './assets/images/bugs/NH-Icon-goldenstag.png',
+        price: '12000',
+        location: 'On coconut trees',
+        time: '5:00 pm - 8:00 am',
+        months: 'Jul - Aug',
+        southernMonths: 'Jan - Feb',
+        notes: ''
+        },
+        giraffeStag: {
+        name: 'Giraffe Stag',
+        picture: './assets/images/bugs/NH-Icon-giraffestag.png',
+        price: '12000',
+        location: 'On cocnut trees',
+        time: '5:00 pm - 8:00 am',
+        months: 'Jul - Aug',
+        southernMonths: 'Jan - Feb',
+        notes: ''
+        },
+        hornedDynastid: {
+        name: 'Horned Dynastid',
+        picture: './assets/images/bugs/NH-Icon-horneddynastid.png',
+        price: '1350',
+        location: 'On trees',
+        time: '5:00 pm - 8:00 am',
+        months: 'Jul - Aug',
+        southernMonths: 'Jan - Feb',
+        notes: ''
+        },
+        hornedAtlas: {
+        name: 'Horned Atlas',
+        picture: './assets/images/bugs/NH-Icon-hornedatlas.png',
+        price: '8000',
+        location: 'on coconut trees',
+        time: '5:00 pm - 8:00 am',
+        months: 'Jul - Aug',
+        southernMonths: 'Jan - Feb',
+        notes: ''
+        },
+        hornedElephant: {
+        name: 'Horned Elephant',
+        picture: './assets/images/bugs/NH-Icon-hornedelephant.png',
+        price: '8000',
+        location: 'On coconut trees',
+        time: '5:00 pm - 8:00 am',
+        months: 'Jul - Aug',
+        southernMonths: 'Jan - Feb',
+        notes: ''
+        },
+        hornedHercules: {
+        name: 'Horned Hercules',
+        picture: './assets/images/bugs/NH-Icon-hornedhercules.png',
+        price: '12000',
+        location: 'On coconut trees',
+        time: '5:00 pm - 8:00 am',
+        months: 'Jul - Aug',
+        southernMonths: 'Jan - Feb',
+        notes: ''
+        },
+        walkingStick: {
+        name: 'Walking Stick',
+        picture: './assets/images/bugs/NH-Icon-walkingstick.png',
+        price: '600',
+        location: 'On trees',
+        time: '4:00 am - 8:00 am & 5:00 pm - 7:00 pm',
+        months: 'Jul - Nov',
+        southernMonths: 'Jan - May',
+        notes: ''
+        },
+        walkingLeaf: {
+        name: 'Walking Leaf',
+        picture: './assets/images/bugs/NH-Icon-walkingleaf.png',
+        price: '600',
+        location: 'Under trees disguised as leaves',
+        time: 'All Day',
+        months: 'Jul - Sep',
+        southernMonths: 'Jan - Mar',
+        notes: ''
+        },
+        bagworm: {
+        name: 'Bagworm',
+        picture: './assets/images/bugs/NH-Icon-bagworm.png',
+        price: '600',
+        location: 'Shaking trees',
+        time: 'All Day',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        ant: {
+        name: 'Ant',
+        picture: './assets/images/bugs/NH-Icon-ant.png',
+        price: '80',
+        location: 'On rotten food',
+        time: 'All Day',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        hermitCrab: {
+        name: 'Hermit Crab',
+        picture: './assets/images/bugs/NH-Icon-hermitcrab.png',
+        price: '1000',
+        location: 'Beach disguised as shells',
+        time: '7:00 pm - 8:00 am',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        wharfRoach: {
+        name: 'Wharf Roach',
+        picture: './assets/images/bugs/NH-Icon-wharfroach.png',
+        price: '200',
+        location: 'On beach rocks',
+        time: 'All Day',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        fly: {
+        name: 'Fly',
+        picture: './assets/images/bugs/NH-Icon-fly.png',
+        price: '60',
+        location: 'On trash items',
+        time: 'All Day',
+        months: 'All Year',
+        southernMonths: ' All Year',
+        notes: ''
+        },
+        mosquito: {
+        name: 'Mosquito',
+        picture: './assets/images/bugs/NH-Icon-mosquito.png',
+        price: '130',
+        location: 'Flying',
+        time: '5:00 pm - 4:00 am',
+        months: 'Jun - Sep',
+        southernMonths: 'Dec - Mar',
+        notes: ''
+        },
+        flea: {
+        name: 'Flea',
+        picture: './assets/images/bugs/NH-Icon-flea.png',
+        price: '70',
+        location: 'Villager\'s Head',
+        time: 'All Day',
+        months: 'Apr - Nov',
+        southernMonths: 'Oct - May',
+        notes: ''
+        },
+        snail: {
+        name: 'Snail',
+        picture: './assets/images/bugs/NH-Icon-snail.png',
+        price: '250',
+        location: 'On rocks and bushes while raining',
+        time: 'All Day',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        pillBug: {
+        name: 'Pill Bug',
+        picture: './assets/images/bugs/NH-Icon-pillbug.png',
+        price: '250',
+        location: 'Hitting rocks',
+        time: '11:00 pm - 4:00 pm',
+        months: 'Sep - Jun',
+        southernMonths: 'Mar - Dec',
+        notes: ''
+        },
+        centipede: {
+        name: 'Centipede',
+        picture: './assets/images/bugs/NH-Icon-centipede.png',
+        price: '300',
+        location: 'Hitting rocks',
+        time: '4:00 pm - 1:00 pm',
+        months: 'Sep - Jun',
+        southernMonths: 'Mar - Dec',
+        notes: ''
+        },
+        spider: {
+        name: 'Spider',
+        picture: './assets/images/bugs/NH-Icon-spider.png',
+        price: '600',
+        location: 'Shaking trees',
+        time: '7:00 pm - 8:00 am',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        tarantula: {
+        name: 'Tarantula',
+        picture: './assets/images/bugs/NH-Icon-tarantula.png',
+        price: '8000',
+        location: 'On the ground',
+        time: '7:00 pm - 4:00 am',
+        months: 'Nov - Apr',
+        southernMonths: 'May - Oct',
+        notes: ''
+        },
+        scorpion: {
+        name: 'Scorpion',
+        picture: './assets/images/bugs/NH-Icon-scorpion.png',
+        price: '8000',
+        location: 'On the ground',
+        time: '7:00 pm - 4:00 am',
+        months: 'May - Oct',
+        southernMonths: 'Nov - Apr',
+        notes: ''
+        },
     },
-    yellowButterfly: {
-    name:"Yellow Butterfly",
-    picture: './assets/images/bugs/NH-Icon-yellowbutterfly.png',
-    price:"160",
-    location:"Flying",
-    time:"4:00 am - 7:00 pm",
-    months: 'Mar - Jun & Sep - Oct',
-    notes:""
+    //#endregion
+    //#region fish
+    fish: {
+        bitterling: {
+        name: 'Bitterling',
+        picture: './assets/images/fish/NH-Icon-bitterling.png',
+        price: '900',
+        location: 'River',
+        size: '1',
+        time: 'All Day',
+        months: 'Nov - Mar',
+        southernMonths: 'May - Sep',
+        notes: ''
+        },
+        palechub: {
+        name: 'Pale Chub',
+        picture: './assets/images/fish/NH-Icon-palechub.png',
+        price: '200',
+        location: 'River',
+        size: '1',
+        time: '9:00 am - 4:00 pm',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        crucianCarp: {
+        name: 'Crucian Carp',
+        picture: './assets/images/fish/NH-Icon-cruciancarp.png',
+        price: '160',
+        location: 'River',
+        size: '2',
+        time: 'All Day',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        dace: {
+        name: 'Dace',
+        picture: './assets/images/fish/NH-Icon-dace.png',
+        price: '240',
+        location: 'River',
+        size: '3',
+        time: '4:00 pm - 9:00 am',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        carp: {
+        name: 'Carp',
+        picture: './assets/images/fish/NH-Icon-carp.png',
+        price: '300',
+        location: 'Pond',
+        size: '4',
+        time: 'All Day',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        koi: {
+        name: 'Koi',
+        picture: './assets/images/fish/NH-Icon-koi.png',
+        price: '4000',
+        location: 'Pond',
+        size: '4',
+        time: '4:00 pm - 9:00 am',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        goldfish: {
+        name: 'Goldfish',
+        picture: './assets/images/fish/NH-Icon-goldfish.png',
+        price: '1300',
+        location: 'Pond',
+        size: '1',
+        time: 'All Day',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        popeyedGoldfish: {
+        name: 'Pop-eyed Goldfish',
+        picture: './assets/images/fish/NH-Icon-popeyedgoldfish.png',
+        price: '1300',
+        location: 'Pond',
+        size: '1',
+        time: '9:00 am - 4:00 pm',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        ranchuGoldfish: {
+        name: 'Ranchu Goldfish',
+        picture: './assets/images/fish/NH-Icon-ranchugoldfish.png',
+        price: '4500',
+        location: 'Pond',
+        size: '2',
+        time: '9:00 am - 4:00 pm',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        killifish: {
+        name: 'Killifish',
+        picture: './assets/images/fish/NH-Icon-killifish.png',
+        price: '300',
+        location: 'Pond',
+        size: '1',
+        time: 'All Day',
+        months: 'Apr - Aug',
+        southernMonths: 'Oct - Feb',
+        notes: ''
+        },
+        crawfish: {
+        name: 'Crawfish',
+        picture: './assets/images/fish/NH-Icon-crawfish.png',
+        price: '200',
+        location: 'Pond',
+        size: '2',
+        time: 'All Day',
+        months: 'Apr - Sep',
+        southernMonths: 'Oct - Mar',
+        notes: ''
+        },
+        softshelledTurtle: {
+        name: 'Soft-shelled Turtle',
+        picture: './assets/images/fish/NH-Icon-softshelledturtle.png',
+        price: '3750',
+        location: 'River',
+        size: '4',
+        time: '4:00 pm - 9:00 am',
+        months: 'Aug - Sep',
+        southernMonths: 'Feb - Mar',
+        notes: ''
+        },
+        snappingTurtle: {
+        name: 'Snapping Turtle',
+        picture: './assets/images/fish/NH-Icon-snappingturtle.png',
+        price: '5000',
+        location: 'River',
+        size: '4',
+        time: '9:00 pm - 4:00 am',
+        months: 'Apr - Oct',
+        southernMonths: 'Oct - Apr',
+        notes: ''
+        },
+        tadpole: {
+        name: 'Tadpole',
+        picture: './assets/images/fish/NH-Icon-tadpole.png',
+        price: '100',
+        location: 'Pond',
+        size: '1',
+        time: 'All Day',
+        months: 'Mar - Jul',
+        southernMonths: 'Sep - Jan',
+        notes: ''
+        },
+        frog: {
+        name: 'Frog',
+        picture: './assets/images/fish/NH-Icon-frog.png',
+        price: '120',
+        location: 'Pond',
+        size: '2',
+        time: 'All Day',
+        months: 'May - Aug',
+        southernMonths: 'Nov - Feb',
+        notes: ''
+        },
+        freshwaterGoby: {
+        name: 'Freshwater Goby',
+        picture: './assets/images/fish/NH-Icon-freshwatergoby.png',
+        price: '400',
+        location: 'River',
+        size: '2',
+        time: '4:00 pm - 9:00 pm',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        loach: {
+        name: 'Loach',
+        picture: './assets/images/fish/NH-Icon-loach.png',
+        price: '400',
+        location: 'River',
+        size: '2',
+        time: 'All Day',
+        months: 'Mar - May',
+        southernMonths: 'Sep - Nov',
+        notes: ''
+        },
+        catfish: {
+        name: 'Catfish',
+        picture: './assets/images/fish/NH-Icon-catfish.png',
+        price: '800',
+        location: 'Pond',
+        size: '4',
+        time: '4:00 pm - 9:00 am',
+        months: 'May - Oct',
+        southernMonths: 'Nov - Apr',
+        notes: ''
+        },
+        giantSnakehead: {
+        name: 'Giant Snakehead',
+        picture: './assets/images/fish/NH-Icon-giantsnakehead.png',
+        price: '5500',
+        location: 'Pond',
+        size: '4',
+        time: '9:00 am - 4:00 pm',
+        months: 'Jun - Aug',
+        southernMonths: 'Dec - Feb',
+        notes: ''
+        },
+        bluegill: {
+        name: 'Bluegil',
+        picture: './assets/images/fish/NH-Icon-bluegill.png',
+        price: '180',
+        location: 'River',
+        size: '2',
+        time: '9:00 am - 4:00 pm',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        yellowPerch: {
+        name: 'Yellow Perch',
+        picture: './assets/images/fish/NH-Icon-yellowperch.png',
+        price: '300',
+        location: 'River',
+        size: '3',
+        time: 'All Day',
+        months: 'Oct - Mar',
+        southernMonths: 'Apr - Sep',
+        notes: ''
+        },
+        blackBass: {
+        name: 'Black Bass',
+        picture: './assets/images/fish/NH-Icon-blackbass.png',
+        price: '400',
+        location: 'River',
+        size: '4',
+        time: 'All Day',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        tilapia: {
+        name: 'Tilapia',
+        picture: './assets/images/fish/NH-Icon-tilapia.png',
+        price: '800',
+        location: 'River',
+        size: '3',
+        time: 'All Year',
+        months: 'Jun - Oct',
+        southernMonths: 'Dec - Apr',
+        notes: ''
+        },
+        pike: {
+        name: 'Pike',
+        picture: './assets/images/fish/NH-Icon-pike.png',
+        price: '1800',
+        location: 'River',
+        size: '5',
+        time: 'All Day',
+        months: 'Dec - Sep',
+        southernMonths: 'Mar - Jun',
+        notes: ''
+        },
+        pondSmelt: {
+        name: 'Pond Smelt',
+        picture: './assets/images/fish/NH-Icon-pondsmelt.png',
+        price: '500',
+        location: 'River',
+        size: '2',
+        time: 'All Day',
+        months: 'Dec - Feb',
+        southernMonths: 'Jun -Aug',
+        notes: ''
+        },
+        sweetfish: {
+        name: 'Sweetfish',
+        picture: './assets/images/fish/NH-Icon-sweetfish.png',
+        price: '900',
+        location: 'River',
+        size: '3',
+        time: 'All Day',
+        months: 'Jul - Sep',
+        southernMonths: 'Jan - Mar',
+        notes: ''
+        },
+        cherrySalmon: {
+        name: 'Cherry Salmon',
+        picture: './assets/images/fish/NH-Icon-cherrysalmon.png',
+        price: '1000',
+        location: 'River (clifftop)',
+        size: '3',
+        time: '3:00 pm - 9:00 am',
+        months: 'Mar - Jun & Sep - Nov',
+        southernMonths: 'Mar - May & Sep - Dec',
+        notes: ''
+        },
+        char: {
+        name: 'Char',
+        picture: './assets/images/fish/NH-Icon-char.png',
+        price: '3800',
+        location: 'River (clifftop) Pond',
+        size: '3',
+        time: '4:00 pm - 9:00 am & All Day*',
+        months: 'Mar - Jun & Sep - Nov',
+        southernMonths: 'Mar - May & Sep - Dec',
+        notes: ''
+        },
+        goldenTrout: {
+        name: 'Golden Trout',
+        picture: './assets/images/fish/NH-Icon-goldentrout.png',
+        price: '15000',
+        location: 'River (clifftop)',
+        size: '3',
+        time: '4:00 pm - 9:00 am',
+        months: 'Mar - May & Sep - Nov',
+        southernMonths: 'Mar - May & Sep - Nov',
+        notes: ''
+        },
+        stringfish: {
+        name: 'Stringfish',
+        picture: './assets/images/fish/NH-Icon-stringfish.png',
+        price: '15000',
+        location: 'River (clifftop)',
+        size: '5',
+        time: '4:00 pm - 9:00 am',
+        months: 'Dec - Mar',
+        southernMonths: 'Jun - Sep',
+        notes: ''
+        },
+        salmon: {
+        name: 'Salmon',
+        picture: './assets/images/fish/NH-Icon-salmon.png',
+        price: '700',
+        location: 'River (mouth)',
+        size: '4',
+        time: 'All Day',
+        months: 'Sep',
+        southernMonths: 'Mar',
+        notes: ''
+        },
+        kingSalmon: {
+        name: 'King Salmon',
+        picture: './assets/images/fish/NH-Icon-kingsalmon.png',
+        price: '1800',
+        location: 'River (mouth)',
+        size: '5',
+        time: 'All Day',
+        months: 'Sep',
+        southernMonths: 'Mar',
+        notes: ''
+        },
+        mittenCrab: {
+        name: 'Mitten Crab',
+        picture: './assets/images/fish/NH-Icon-mittencrab.png',
+        price: '2000',
+        location: 'River',
+        size: '2',
+        time: '4:00 pm - 9:00 am',
+        months: 'Sep - Nov',
+        southernMonths: 'Mar - May',
+        notes: ''
+        },
+        guppy: {
+        name: 'Guppy',
+        picture: './assets/images/fish/NH-Icon-guppy.png',
+        price: '1300',
+        location: 'River',
+        size: '1',
+        time: '9:00 am - 4:00 pm',
+        months: 'Apr - Nov',
+        southernMonths: 'Oct - May',
+        notes: ''
+        },
+        nibbleFish: {
+        name: 'Nibble Fish',
+        picture: './assets/images/fish/NH-Icon-nibblefish.png',
+        price: '1500',
+        location: 'River',
+        size: '1',
+        time: '9:00 am - 4:00 pm',
+        months: 'May -Sep',
+        southernMonths: 'Nov - Mar',
+        notes: ''
+        },
+        angelFish: {
+        name: 'Angelfish',
+        picture: './assets/images/fish/NH-Icon-angelfish.png',
+        price: '3000',
+        location: 'River',
+        size: '2',
+        time: '4:00 pm - 9:00 am',
+        months: 'May - Oct',
+        southernMonths: 'Nov - Apr',
+        notes: ''
+        },
+        betta: {
+        name: 'Betta',
+        picture: './assets/images/fish/NH-Icon-betta.png',
+        price: '2500',
+        location: 'River',
+        size: '2',
+        time: '9:00 am - 4:00 pm',
+        months: 'May - Oct',
+        southernMonths: 'Nov - Apr',
+        notes: ''
+        },
+        neonTetra: {
+        name: 'Neon Tetra',
+        picture: './assets/images/fish/NH-Icon-neontetra.png',
+        price: '500',
+        location: 'River',
+        size: '1',
+        time: '9:00 am - 4:00 pm',
+        months: 'Apr - Nov',
+        southernMonths: 'Oct - May',
+        notes: ''
+        },
+        rainbowfish: {
+        name: 'Rainbowfish',
+        picture: './assets/images/fish/NH-Icon-rainbowfish.png',
+        price: '800',
+        location: ' River',
+        size: '1',
+        time: '9:00 am - 4:00 pm',
+        months: 'May - Oct',
+        southernMonths: 'Nov - Apr',
+        notes: ''
+        },
+        piranha: {
+        name: 'Piranha',
+        picture: './assets/images/fish/NH-Icon-piranha.png',
+        price: '2500',
+        location: 'River',
+        size: '2',
+        time: '9:00 am - 4:00 pm & 9:00 pm - 4:00 am',
+        months: 'Jun - Sep',
+        southernMonths: 'Dec - Mar',
+        notes: ''
+        },
+        arowana: {
+        name: 'Arowana',
+        picture: './assets/images/fish/NH-Icon-arowana.png',
+        price: '10000',
+        location: 'River',
+        size: '4',
+        time: '4:00 pm - 9:00 am',
+        months: 'Jun - Sep',
+        southernMonths: 'Dec - Mar',
+        notes: ''
+        },
+        dorado: {
+        name: 'Dorado',
+        picture: './assets/images/fish/NH-Icon-dorado.png',
+        price: '15000',
+        location: 'River',
+        size: '5',
+        time: '4:00 am - 9:00 pm',
+        months: 'Jun - Sep',
+        southernMonths: 'Dec - Mar',
+        notes: ''
+        },
+        gar: {
+        name: 'Gar',
+        picture: './assets/images/fish/NH-Icon-gar.png',
+        price: '6000',
+        location: 'Pond',
+        size: '5',
+        time: '4:00 pm - 9:00 am',
+        months: 'Jun - Sep',
+        southernMonths: 'Dec - Mar',
+        notes: ''
+        },
+        arapaima: {
+        name: 'Arapaima',
+        picture: './assets/images/fish/NH-Icon-arapaima.png',
+        price: '10000',
+        location: 'River',
+        size: '6',
+        time: '4:00 pm - 9:00 am',
+        months: 'Jun - Sep',
+        southernMonths: 'Dec - Mar',
+        notes: ''
+        },
+        saddledBichir: {
+        name: 'Saddled Bichir',
+        picture: './assets/images/fish/NH-Icon-saddledbichir.png',
+        price: '4000',
+        location: 'River',
+        size: '4',
+        time: '9:00 pm - 4:00 am',
+        months: 'Jun - Sep',
+        southernMonths: 'Dec - Mar',
+        notes: ''
+        },
+        sturgeon: {
+        name: 'Sturgeon',
+        picture: './assets/images/fish/NH-Icon-sturgeon.png',
+        price: '10000',
+        location: 'River (mouth)',
+        size: '6',
+        time: 'All Day',
+        months: 'Sep - Mar',
+        southernMonths: 'Mar - Sep',
+        notes: ''
+        },
+        seaButterfly: {
+        name: 'Sea Butterfly',
+        picture: './assets/images/fish/NH-Icon-seabutterfly.png',
+        price: '1000',
+        location: 'Sea',
+        size: '1',
+        time: 'All Day',
+        months: 'Dec - Mar',
+        southernMonths: 'Jun - Sep',
+        notes: ''
+        },
+        seaHorse: {
+        name: 'Sea Horse',
+        picture: './assets/images/fish/NH-Icon-seahorse.png',
+        price: '1100',
+        location: 'Sea',
+        size: '1',
+        time: 'All Day',
+        months: 'Apr - Nov',
+        southernMonths: 'Oct - May',
+        notes: ''
+        },
+        clownFish: {
+        name: 'Clown Fish',
+        picture: './assets/images/fish/NH-Icon-clownfish.png',
+        price: '250',
+        location: 'Sea',
+        size: '1',
+        time: 'All Day',
+        months: 'Apr - Sep',
+        southernMonths: 'Oct - Mar',
+        notes: ''
+        },
+        surgeonfish: {
+        name: 'Surgeon Fish',
+        picture: './assets/images/fish/NH-Icon-surgeonfish.png',
+        price: '1000',
+        location: 'Sea',
+        size: '2',
+        time: 'All Day',
+        months: 'Apr - Sep',
+        southernMonths: 'Oct - Mar',
+        notes: ''
+        },
+        butterflyFish: {
+        name: 'Butterfly Fish',
+        picture: './assets/images/fish/NH-Icon-butterflyfish.png',
+        price: '1000',
+        location: 'Sea',
+        size: '2',
+        time: 'All Day',
+        months: 'Apr - Sep',
+        southernMonths: 'Oct - Mar',
+        notes: ''
+        },
+        napoleonfish: {
+        name: 'Napoleonfish',
+        picture: './assets/images/fish/NH-Icon-napoleonfish.png',
+        price: '10000',
+        location: 'Sea',
+        size: '6',
+        time: '4:00 am - 9:00 pm',
+        months: 'Jul - Aug',
+        southernMonths: 'Jan - Feb',
+        notes: ''
+        },
+        zebraTurkeyfish: {
+        name: 'Zebra Turkeyfish',
+        picture: './assets/images/fish/NH-Icon-zebraturkeyfish.png',
+        price: '500',
+        location: 'Sea',
+        size: '3',
+        time: 'All Day',
+        months: 'Apr - Nov',
+        southernMonths: 'Oct - May',
+        notes: ''
+        },
+        blowfish: {
+        name: 'Blowfish',
+        picture: './assets/images/fish/NH-Icon-blowfish.png',
+        price: '5000',
+        location: 'Sea',
+        size: '3',
+        time: '9:00 pm - 4:00 am',
+        months: 'Nov - Feb',
+        southernMonths: 'May - Aug',
+        notes: ''
+        },
+        pufferFish: {
+        name: 'Puffer Fish',
+        picture: './assets/images/fish/NH-Icon-pufferfish.png',
+        price: '250',
+        location: 'Sea',
+        size: '3',
+        time: 'All Day',
+        months: 'Jul - Sep',
+        southernMonths: 'Jan - Mar',
+        notes: ''
+        },
+        anchovy: {
+        name: 'Anchovy',
+        picture: './assets/images/fish/NH-Icon-anchovy.png',
+        price: '200',
+        location: 'Sea',
+        size: '2',
+        time: '4:00 am - 9:00 pm',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        horseMackerel: {
+        name: 'Horse Mackerel',
+        picture: './assets/images/fish/NH-Icon-horsemackerel.png',
+        price: '150',
+        location: 'Sea',
+        size: '2',
+        time: 'All Day',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        barredKnifejaw: {
+        name: 'Barred Knifejaw',
+        picture: './assets/images/fish/NH-Icon-barredknifejaw.png',
+        price: '5000',
+        location: 'Sea',
+        size: '3',
+        time: 'All Day',
+        months: 'Mar - Nov',
+        southernMonths: 'Sep - May',
+        notes: ''
+        },
+        seaBass: {
+        name: 'Sea Bass',
+        picture: './assets/images/fish/NH-Icon-seabass.png',
+        price: '400',
+        location: 'Sea',
+        size: '5',
+        time: 'All Day',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        redSnapper: {
+        name: 'Red Snapper',
+        picture: './assets/images/fish/NH-Icon-redsnapper.png',
+        price: '3000',
+        location: 'Sea',
+        size: '4',
+        time: 'All Day',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        dab: {
+        name: 'Dab',
+        picture: './assets/images/fish/NH-Icon-dab.png',
+        price: '300',
+        location: 'Sea',
+        size: '3',
+        time: 'All Day',
+        months: 'Sep - Apr',
+        southernMonths: 'Apr - Oct',
+        notes: ''
+        },
+        oliveFlounder: {
+        name: 'Olive Flounder',
+        picture: './assets/images/fish/NH-Icon-oliveflounder.png',
+        price: '800',
+        location: 'Sea',
+        size: '5',
+        time: 'All Day',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        squid: {
+        name: 'Squid',
+        picture: './assets/images/fish/NH-Icon-squid.png',
+        price: '500',
+        location: 'Sea',
+        size: '3',
+        time: 'All Day',
+        months: 'Dec - Aug',
+        southernMonths: 'Jun - Feb',
+        notes: ''
+        },
+        morayEel: {
+        name: 'Moray Eel',
+        picture: './assets/images/fish/NH-Icon-morayeel.png',
+        price: '2000',
+        location: 'Sea',
+        size: 'Narrow',
+        time: 'All Day',
+        months: 'Aug - Oct',
+        southernMonths: 'Feb - Apr',
+        notes: ''
+        },
+        ribbonEel: {
+        name: 'Ribbon Eel',
+        picture: './assets/images/fish/NH-Icon-ribboneel.png',
+        price: '600',
+        location: 'Sea',
+        size: 'Narrow',
+        time: 'All Day',
+        months: 'Jun - Oct',
+        southernMonths: 'Dec - Apr',
+        notes: ''
+        },
+        tuna: {
+        name: 'Tuna',
+        picture: './assets/images/fish/NH-Icon-tuna.png',
+        price: '7000',
+        location: 'Pier',
+        size: '6',
+        time: 'All Day',
+        months: 'Nov - Apr',
+        southernMonths: 'May - Oct',
+        notes: ''
+        },
+        blueMarlin: {
+        name: 'Blue Marlin',
+        picture: './assets/images/fish/NH-Icon-bluemarlin.png',
+        price: '10000',
+        location: 'Pier',
+        size: '6',
+        time: 'All Day',
+        months: 'Jul - Sep & Nov - Apr',
+        southernMonths: 'Jan - Mar & May - Oct',
+        notes: ''
+        },
+        giantTrevally: {
+        name: 'Giant Trevally',
+        picture: './assets/images/fish/NH-Icon-gianttrevally.png',
+        price: '4500',
+        location: 'Pier',
+        size: '5',
+        time: 'All Day',
+        months: 'May - Oct',
+        southernMonths: 'Nov - Apr',
+        notes: ''
+        },
+        mahiMahi: {
+        name: 'Mahi-Mahi',
+        picture: './assets/images/fish/NH-Icon-mahimahi.png',
+        price: '6000',
+        location: 'Pier',
+        size: '5',
+        time: 'All Day',
+        months: 'May - Oct',
+        southernMonths: 'Nov - Apr',
+        notes: ''
+        },
+        oceanSunfish: {
+        name: 'Ocean Sunfish',
+        picture: './assets/images/fish/NH-Icon-oceansunfish.png',
+        price: '4000',
+        location: 'Sea',
+        size: '6(fin)',
+        time: '4:0 am - 9:00 pm',
+        months: 'Jul - Sep',
+        southernMonths: 'Jan - Mar',
+        notes: ''
+        },
+        ray: {
+        name: 'Ray',
+        picture: './assets/images/fish/NH-Icon-ray.png',
+        price: '3000',
+        location: 'Sea',
+        size: '5',
+        time: '4:00 am - 9:00 pm',
+        months: 'Aug - Nov',
+        southernMonths: 'Feb - May',
+        notes: ''
+        },
+        sawShark: {
+        name: 'Saw Shark',
+        picture: './assets/images/fish/NH-Icon-sawshark.png',
+        price: '12000',
+        location: 'Sea',
+        size: '6(fin)',
+        time: '4:00 pm - 9:00 am',
+        months: 'Jun - Sep',
+        southernMonths: 'Dec - Mar',
+        notes: ''
+        },
+        hammerheadShark: {
+        name: 'Hammerhead Shark',
+        picture: './assets/images/fish/NH-Icon-hammerheadshark.png',
+        price: '8000',
+        location: 'Sea',
+        size: '6(fin)',
+        time: '4:00 pm - 9:00 am',
+        months: 'Jun - Sep',
+        southernMonths: 'Dec -Mar',
+        notes: ''
+        },
+        greatWhiteShark: {
+        name: 'Great White Shark',
+        picture: './assets/images/fish/NH-Icon-greatwhiteshark.png',
+        price: '15000',
+        location: 'Sea',
+        size: '6(fin)',
+        time: '4:00 pm - 9:00 am',
+        months: 'Jun - Sep',
+        southernMonths: 'Dec - Mar',
+        notes: ''
+        },
+        whaleShark: {
+        name: 'Whale Shark',
+        picture: './assets/images/fish/NH-Icon-whaleshark.png',
+        price: '13000',
+        location: 'Sea',
+        size: '6(fin)',
+        time: 'All Day',
+        months: 'Jun - Sep',
+        southernMonths: 'Dec Mar',
+        notes: ''
+        },
+        suckerfish: {
+        name: 'Suckerfish',
+        picture: './assets/images/fish/NH-Icon-suckerfish.png',
+        price: '1500',
+        location: 'Sea',
+        size: '6(fin)',
+        time: 'All Day',
+        months: 'Jun - Sep',
+        southernMonths: 'Dec - Mar',
+        notes: ''
+        },
+        footballFish: {
+        name: 'Football Fish',
+        picture: './assets/images/fish/NH-Icon-footballfish.png',
+        price: '2500',
+        location: 'Sea',
+        size: '4',
+        time: '4:00 pm - 9:00 am',
+        months: 'Nov - Mar',
+        southernMonths: 'May - Sep',
+        notes: ''
+        },
+        oarfish: {
+        name: 'Oarfish',
+        picture: './assets/images/fish/NH-Icon-oarfish.png',
+        price: '9000',
+        location: 'Sea',
+        size: '6',
+        time: 'All Day',
+        months: 'Dec - May',
+        southernMonths: 'Jun - Nov',
+        notes: ''
+        },
+        barreleye: {
+        name: 'Barreleye',
+        picture: './assets/images/fish/NH-Icon-barreleye.png',
+        price: '15000',
+        location: 'Sea',
+        size: '2',
+        time: '9:00 pm - 4:00 am',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        coelacanth: {
+        name: 'Coelacanth',
+        picture: './assets/images/fish/NH-Icon-coelacanth.png',
+        price: '15000',
+        location: 'Sea(rain)',
+        size: '6',
+        time: 'All Day',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
     },
-    tigerButterfly: {
-    name:"Tiger Butterfly",
-    picture: './assets/images/bugs/NH-Icon-tigerbutterfly.png',
-    price:"240",
-    location:"Flying",
-    time:"4:00 am - 7:00 pm",
-    months: 'Mar - Sep',
-    notes:""
-    },
-    peacockButterfly: {
-    name:"Peacock Butterfly",
-    picture: './assets/images/bugs/NH-Icon-peacockbutterfly.png',
-    price:"2500",
-    location:"Flying by Hybrid Flowers",
-    time:"4:00 am - 7:00 pm",
-    months: 'Mar - Jun',
-    notes:"Purple, Black and Blue Flowers."
-    },
-    commonBluebottle: {
-    name:"Commom Bluebottle",
-    picture: './assets/images/bugs/NH-Icon-commonbluebottle.png',
-    price:"300",
-    location:"Flying",
-    time:"4:00 am - 7:00 pm",
-    months: 'Apr - Aug',
-    notes:""
-    },
-    paperKiteButterfly: {
-    name: 'Paper Kite Butterfly',
-    picture: './assets/images/bugs/NH-Icon-paperkitebutterfly.png',
-    price: '1000',
-    location: 'Flying',
-    time: '8:00 am - 7:00 pm',
-    months: 'All Year',
-    notes: ''
-    },
-    greatPurpleEmperor: {
-    name: 'Great Purple Emperor',
-    picture: './assets/images/bugs/NH-Icon-greatpurpleemperor.png',
-    price: '3000',
-    location: 'Flying',
-    time: '4:00 am - 7:00 pm',
-    months: 'May - Aug',
-    notes: ''
-    },
-    monarchButterfly: {
-    name: 'Monarch Butterfly',
-    picture: './assets/images/bugs/NH-Icon-monarchbutterfly.png',
-    price: '140',
-    location: 'Flying',
-    time: '4:00 am - 5:00 pm',
-    months: 'Sep - Nov',
-    notes: ''
-    },
-    emperorButterfly: {
-    name: 'Emperor Butterfly',
-    picture: './assets/images/bugs/NH-Icon-emperorbutterfly.png',
-    price: '4000',
-    location: 'Flying',
-    time: '5:00 pm - 8:00 am',
-    months: 'Dec - Mar & Jun - Sep',
-    notes: ''
-    },
-    agriasButterfly: {
-    name: 'Agrias Butterfly',
-    picture: './assets/images/bugs/NH-Icon-agriasbutterfly.png',
-    price: '3000',
-    location: 'Flying',
-    time: '8:00 am - 5:00 pm',
-    months: 'Apr - Sep',
-    notes: ''
-    },
-    rajahBrookesBirdwing: {
-    name: 'Rajah Brooke\'s Birdwing',
-    picture: './assets/images/bugs/NH-Icon-rajahbrookesbirdwing.png',
-    price: '2500',
-    location: 'Flying',
-    time: '8:00 am - 5:00 pm',
-    months: 'Dec - Feb & Apr - Sep',
-    notes: ''
-    },
-    queenAlexandrasBirdwing: {
-    name: 'Queen Alexandra\'s Birdwing',
-    picture: './assets/images/bugs/NH-Icon-queenalexandrasbirdwing.png',
-    price: '4000',
-    location: 'Flying',
-    time: '8:00 am - 4:00 pm',
-    months: 'May - Sep',
-    notes: ''
-    },
-    moth: {
-    name: 'Moth',
-    picture: './assets/images/bugs/NH-Icon-moth.png',
-    price: '130',
-    location: 'Flying by lights',
-    time: '7:00 pm - 4:00 am',
-    months: 'All Year',
-    notes: ''
-    },
-    atlasMoth: {
-    name: 'Atlas Moth',
-    picture: './assets/images/bugs/NH-Icon-atlasmoth.png',
-    price: '3000',
-    location: 'On trees',
-    time: '7:00 pm - 4:00 am',
-    months: 'Apr - Sep',
-    notes: ''
-    },
-    madagacanSunsetMoth: {
-    name: 'Madagascan Sunset Moth',
-    picture: './assets/images/bugs/NH-Icon-madagascansunsetmoth.png',
-    price: '2500',
-    location: 'Flying',
-    time: '8:00 am - 7:00 pm',
-    months: 'Apr - Sep',
-    notes: ''
-    },
-    longLocust: {
-    name: 'Long Locust',
-    picture: './assets/images/bugs/NH-Icon-longlocust.png',
-    price: '200',
-    location: 'On the ground',
-    time: '8:00 am - 7:00 pm',
-    months: 'Apr - Nov',
-    notes: ''
-    },
-    migratoryLocust: {
-    name: 'Migratory Locust',
-    picture: './assets/images/bugs/NH-Icon-migratorylocust.png',
-    price: '600',
-    location: 'On the ground',
-    time: '8:00 am - 7:00 pm',
-    months: 'Aug - Nov',
-    notes: ''
-    },
-    riceGrasshopper: {
-    name: 'Rice Grasshopper',
-    picture: './assets/images/bugs/NH-Icon-ricegrasshopper.png',
-    price: '160',
-    location: 'On the ground',
-    time: '8:00 am - 7:00 pm',
-    months: 'Aug - Nov',
-    notes: ''
-    },
-    grasshopper: {
-    name: 'Grasshopper',
-    picture: './assets/images/bugs/NH-Icon-grasshopper.png',
-    price: '160',
-    location: 'On the ground',
-    time: '8:00 am - 7:00 pm',
-    months: 'Jul - Sep',
-    notes: ''
-    },
-    cricket: {
-    name: 'Cricket',
-    picture: './assets/images/bugs/NH-Icon-cricket.png',
-    price: '130',
-    location: 'On the ground',
-    time: '5:00 pm - 8:00 am',
-    months: 'Sep - Nov',
-    notes: ''
-    },
-    bellCricket: {
-    name: 'Bell Cricket',
-    picture: './assets/images/bugs/NH-Icon-bellcricket.png',
-    price: '430',
-    location: 'On the ground',
-    time: '5:00 pm - 8:00 am',
-    months: 'Sep - Oct',
-    notes: ''
-    },
-    mantis: {
-    name: 'Mantis',
-    picture: './assets/images/bugs/NH-Icon-mantis.png',
-    price: '430',
-    location: 'On Flowers',
-    time: '8:00 am - 5:00 pm',
-    months: 'Mar - Nov',
-    notes: ''
-    },
-    orchidMantis: {
-    name: 'Orchid Mantis',
-    picture: './assets/images/bugs/NH-Icon-orchidmantis.png',
-    price: '2400',
-    location: 'On Flowers (White)',
-    time: '8:00 am - 5:00 pm',
-    months: 'Mar - Nov',
-    notes: ''
-    },
-    honeyBee: {
-    name: 'Honey Bee',
-    picture: './assets/images/bugs/NH-Icon-honeybee.png',
-    price: '200',
-    location: 'Flying',
-    time: '8:00 am - 5:00 pm',
-    months: 'Mar - Jul',
-    notes: ''
-    },
-    wasp: {
-    name: 'Wasp',
-    picture: './assets/images/bugs/NH-Icon-wasp.png',
-    price: '2500',
-    location: 'Shaking trees',
-    time: 'all day',
-    months: 'All Year',
-    notes: ''
-    },
-    brownCicada: {
-    name: 'Brown Cicada',
-    picture: './assets/images/bugs/NH-Icon-browncicada.png',
-    price: '250',
-    location: 'On trees',
-    time: '8:00 am - 5:00 pm',
-    months: 'Jul - Aug',
-    notes: ''
-    },
-    robustCicada: {
-    name: 'Robust Cicada',
-    picture: './assets/images/bugs/NH-Icon-robustcicada.png',
-    price: '300',
-    location: 'On trees',
-    time: '8:00 am - 5:00 pm',
-    months: 'Jul - Aug',
-    notes: ''
-    },
-    giantCicada: {
-    name: 'Giant Cicada',
-    picture: './assets/images/bugs/NH-Icon-giantcicada.png',
-    price: '500',
-    location: 'On trees',
-    time: '8:00 am - 5:00 pm',
-    months: 'Jul - Aug',
-    notes: ''
-    },
-    walkerCicada: {
-    name: 'Walker Cicada',
-    picture: './assets/images/bugs/NH-Icon-walkercicada.png',
-    price: '400',
-    location: 'On trees',
-    time: '8:00 am - 5:00 pm',
-    months: 'Aug - Sep',
-    notes: ''
-    },
-    eveningCicada: {
-    name: 'Evening Cicada',
-    picture: './assets/images/bugs/NH-Icon-eveningcicada.png',
-    price: '550',
-    location: 'On trees',
-    time: '4:00 am - 8:00 am & 4:00 pm - 7:00 pm',
-    months: 'Jul - Aug',
-    notes: ''
-    },
-    cicadaShell: {
-    name: 'Cicada Shell',
-    picture: './assets/images/bugs/NH-Icon-cicadashell.png',
-    price: '10',
-    location: 'On trees',
-    time: 'all day',
-    months: 'Jul - Aug',
-    notes: ''
-    },
-    redDragonfly: {
-    name: 'Red Dragonfly',
-    picture: './assets/images/bugs/NH-Icon-reddragonfly.png',
-    price: '180',
-    location: 'Flying',
-    time: '8:00 am - 7:00 pm',
-    months: 'Sep - Oct',
-    notes: ''
-    },
-    darnerDragonfly: {
-    name: 'Darner Dragonfly',
-    picture: './assets/images/bugs/NH-Icon-darnerdragonfly.png',
-    price: '230',
-    location: 'Flying',
-    time: '8:00 am - 5:00 pm',
-    months: 'Apr - Oct',
-    notes: ''
-    },
-    bandedDragonfly: {
-    name: 'Banded Dragonfly',
-    picture: './assets/images/bugs/NH-Icon-bandeddragonfly.png',
-    price: '4500',
-    location: 'Flying',
-    time: '8:00 am - 5:00 pm',
-    months: 'May - Oct',
-    notes: ''
-    },
-    damselfly: {
-    name: 'Damselfly',
-    picture: './assets/images/bugs/NH-Icon-damselfly.png',
-    price: '500',
-    location: 'Flying',
-    time: 'all day',
-    months: 'Nov - Feb',
-    notes: ''
-    },
-    firefly: {
-    name: 'Firefly',
-    picture: './assets/images/bugs/NH-Icon-firefly.png',
-    price: '300',
-    location: 'Flying',
-    time: '7:00 pm - 4:00 am',
-    months: 'Jun',
-    notes: ''
-    },
-    moleCricket: {
-    name: 'Mole Cricket',
-    picture: './assets/images/bugs/NH-Icon-molecricket.png',
-    price: '500',
-    location: 'Underground',
-    time: 'all day',
-    months: 'May - Oct',
-    notes: ''
-    },
-    pondskater: {
-    name: 'Pondskater',
-    picture: './assets/images/bugs/NH-Icon-pondskater.png',
-    price: '130',
-    location: 'On Ponds and Rivers',
-    time: '8:00 am - 7:00 pm',
-    months: 'May - Sep',
-    notes: ''
-    },
-    divingBeetle: {
-    name: 'Diving Beetle',
-    picture: './assets/images/bugs/NH-Icon-divingbeetle.png',
-    price: '800',
-    location: 'On Ponds and Rivers',
-    time: '8:00 am - 7:00 pm',
-    months: 'May - Sep',
-    notes: ''
-    },
-    giantWaterBug: {
-    name: 'Giant Water Bug',
-    picture: './assets/images/bugs/NH-Icon-giantwaterbug.png',
-    price: '2000',
-    location: 'On Ponds and Rivers',
-    time: '7:00 pm - 8:00 am',
-    months: 'Apr - Sep',
-    notes: ''
-    },
-    stinkbug: {
-    name: 'Stinkbug',
-    picture: './assets/images/bugs/NH-Icon-stinkbug.png',
-    price: '120',
-    location: 'On Flowers',
-    time: 'all day',
-    months: 'Mar - Oct',
-    notes: ''
-    },
+    //#endregion
+    //#region sea creatures
+    seaCreature: {
+        seaweed: {
+        name: 'Seaweed',
+        picture: './assets/images/seaCreatures/NH-Icon-seaweed.png',
+        price: '600',
+        size: 'Large',
+        movement: 'Stationary',
+        time: 'All Day',
+        months: 'Oct - Jul',
+        southernMonths: 'Apr - Jan',
+        notes: ''
+        },
+        seaGrapes: {
+        name: 'Sea grapes',
+        picture: './assets/images/seaCreatures/NH-Icon-seagrapes.png',
+        price: '900',
+        size: 'Small',
+        movement: 'Stationary',
+        time: 'All Day',
+        months: 'Jun - Sep',
+        southernMonths: 'Dec - Mar',
+        notes: ''
+        },
+        seaCucumber: {
+        name: 'Sea Cucumber',
+        picture: './assets/images/seaCreatures/NH-Icon-seacucumber.png',
+        price: '500',
+        size: 'Medium',
+        movement: 'Slow consistent',
+        time: 'All Day',
+        months: 'Nov - Apr',
+        southernMonths: 'May - Oct',
+        notes: ''
+        },
+        seaPig: {
+        name: 'Sea Pig',
+        picture: './assets/images/seaCreatures/NH-Icon-seapig.png',
+        price: '10000',
+        size: 'Small',
+        movement: 'Quick Long lunges',
+        time: '4:00 pm - 9:00 am',
+        months: 'Nov - Feb',
+        southernMonths: 'May - Aug',
+        notes: ''
+        },
+        seaStar: {
+        name: 'Sea Star',
+        picture: './assets/images/seaCreatures/NH-Icon-seastar.png',
+        price: '500',
+        size: 'Small',
+        movement: 'Slow short lunges',
+        time: 'All Day',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        seaUrchin: {
+        name: 'Sea Urchin',
+        picture: './assets/images/seaCreatures/NH-Icon-seaurchin.png',
+        price: '1700',
+        size: 'Small',
+        movement: 'Slow consistent',
+        time: 'All Day',
+        months: 'May - Sep',
+        southernMonths: 'Nov - Mar',
+        notes: ''
+        },
+        slatePencilurchin: {
+        name: 'Slate Pencil Urchin',
+        picture: './assets/images/seaCreatures/NH-Icon-slatepencilurchin.png',
+        price: '2000',
+        size: 'Medium',
+        movement: 'Moderate consistent',
+        time: '4:00 pm - 9:00 am',
+        months: 'May - Sep',
+        southernMonths: 'Nov - Mar',
+        notes: ''
+        },
+        seaAnemone: {
+        name: 'Sea Anemone',
+        picture: './assets/images/seaCreatures/NH-Icon-seaanemone.png',
+        price: '500',
+        size: 'Large',
+        movement: 'Stationary',
+        time: 'All Day',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        moonJellyfish: {
+        name: 'Moon Jellyfish',
+        picture: './assets/images/seaCreatures/NH-Icon-moonjellyfish.png',
+        price: '600',
+        size: 'Small',
+        movement: 'Slow consistent',
+        time: 'All Day',
+        months: 'Jul - Sep',
+        southernMonths: 'Jan - Mar',
+        notes: ''
+        },
+        seaSlug: {
+        name: 'Sea Slug',
+        picture: './assets/images/seaCreatures/NH-Icon-seaslug.png',
+        price: '600',
+        size: 'Tiny',
+        movement: 'Slow consistent',
+        time: 'All Day',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        pearlOyster: {
+        name: 'Pearl Oyster',
+        picture: './assets/images/seaCreatures/NH-Icon-pearloyster.png',
+        price: '2800',
+        size: 'Small',
+        movement: 'Moderate long lunges',
+        time: 'All Day',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        mussel: {
+        name: 'Mussel',
+        picture: './assets/images/seaCreatures/NH-Icon-mussel.png',
+        price: '1500',
+        size: 'Small',
+        movement: 'Slow consistent',
+        time: 'All Day',
+        months: 'Jun - Dec',
+        southernMonths: 'Dec - Jun',
+        notes: ''
+        },
+        oyster: {
+        name: 'Oyster',
+        picture: './assets/images/seaCreatures/NH-Icon-oyster.png',
+        price: '1100',
+        size: 'Small',
+        movement: 'Moderate short lunges',
+        time: 'All Day',
+        months: 'Sep - Feb',
+        southernMonths: 'Mar - Aug',
+        notes: ''
+        },
+        scallop: {
+        name: 'Scallop',
+        picture: './assets/images/seaCreatures/NH-Icon-scallop.png',
+        price: '1200',
+        size: 'Medium',
+        movement: 'Slow long lunges',
+        time: 'All Day',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        whelk: {
+        name: 'Whelk',
+        picture: './assets/images/seaCreatures/NH-Icon-whelk.png',
+        price: '1000',
+        size: 'Small',
+        movement: 'Slow consistent',
+        time: 'All Day',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        turbanShell: {
+        name: 'Turban Shell',
+        picture: './assets/images/seaCreatures/NH-Icon-turbanshell.png',
+        price: '1000',
+        size: 'Small',
+        movement: 'Slow',
+        time: 'All Day',
+        months: 'Mar - May & Sep - Dec',
+        southernMonths: 'Mar - Jun & Sep - Nov',
+        notes: ''
+        },
+        abalone: {
+        name: 'Abalone',
+        picture: './assets/images/seaCreatures/NH-Icon-abalone.png',
+        price: '2000',
+        size: 'Medium',
+        movement: 'Moderate consistent',
+        time: '4:00 pm - 9:00 am',
+        months: 'Jun - Jan',
+        southernMonths: 'Dec - Jul',
+        notes: ''
+        },
+        gigasGiantClam: {
+        name: 'Gigas Giant Clam',
+        picture: './assets/images/seaCreatures/NH-Icon-gigasgiantclam.png',
+        price: '15000',
+        size: 'Huge',
+        movement: 'Quick long lunges',
+        time: 'All Day',
+        months: 'May - Sep',
+        southernMonths: 'Nov - Mar',
+        notes: ''
+        },
+        chamberedNautilus: {
+        name: 'Chambered Nautilus',
+        picture: './assets/images/seaCreatures/NH-Icon-chamberednautilus.png',
+        price: '1800',
+        size: 'Medium',
+        movement: 'Slow',
+        time: '4:00 pm - 9:00 am',
+        months: 'Mar - Jun & Sep - Nov',
+        southernMonths: 'Mar - May & Sep - Dec',
+        notes: ''
+        },
+        octopus: {
+        name: 'Octopus',
+        picture: './assets/images/seaCreatures/NH-Icon-octopus.png',
+        price: '1200',
+        size: 'Medium',
+        movement: 'Moderate long lunges',
+        time: 'All Day',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        umbrellaOctopus: {
+        name: 'Umbrella Octopus',
+        picture: './assets/images/seaCreatures/NH-Icon-umbrellaoctopus.png',
+        price: '6000',
+        size: 'Small',
+        movement: 'Quick long lunges',
+        time: 'All Day',
+        months: 'Mar - May & Sep - Nov',
+        southernMonths: 'Mar - May & Sep - Nov',
+        notes: ''
+        },
+        vampireSquid: {
+        name: 'Vampire Squid',
+        picture: './assets/images/seaCreatures/NH-Icon-vampiresquid.png',
+        price: '10000',
+        size: 'Medium',
+        movement: 'Quick long lunges',
+        time: '5:00 pm - 9:00 am',
+        months: 'May - Jul',
+        southernMonths: 'Nov - Feb',
+        notes: ''
+        },
+        fireflySquid: {
+        name: 'Firefly Squid',
+        picture: './assets/images/seaCreatures/NH-Icon-fireflysquid.png',
+        price: '1400',
+        size: 'Tiny',
+        movement: 'Slow',
+        time: '9:00 pm - 4:00 am',
+        months: 'Mar - Jun',
+        southernMonths: 'Sep - Dec',
+        notes: ''
+        },
+        gazamiCrab: {
+        name: 'Gazami Crab',
+        picture: './assets/images/seaCreatures/NH-Icon-gazamicrab.png',
+        price: '2200',
+        size: 'Medium',
+        movement: 'Moderate long lunges',
+        time: 'All Day',
+        months: 'Jun - Nov',
+        southernMonths: 'Dec - May',
+        notes: ''
+        },
+        dungenessCrab: {
+        name: 'Dungeness Crab',
+        picture: './assets/images/seaCreatures/NH-Icon-dungenesscrab.png',
+        price: '1900',
+        size: 'Medium',
+        movement: 'Moderate',
+        time: 'All Day',
+        months: 'Nov - May',
+        southernMonths: 'May - Nov',
+        notes: ''
+        },
+        snowCrab: {
+        name: 'Snow Crab',
+        picture: './assets/images/seaCreatures/NH-Icon-snowcrab.png',
+        price: '6000',
+        size: 'Large',
+        movement: 'Quick long lunges',
+        time: 'All Day',
+        months: 'Nov - Apr',
+        southernMonths: 'May - Oct',
+        notes: ''
+        },
+        redKingCrab: {
+        name: 'Red King Crab',
+        picture: './assets/images/seaCreatures/NH-Icon-redkingcrab.png',
+        price: '8000',
+        size: 'Large',
+        movement: 'Quick',
+        time: 'All Day',
+        months: 'Nov - Mar',
+        southernMonths: 'May - Sep',
+        notes: ''
+        },
+        acornBarnacle: {
+        name: 'Acorn Barnacle',
+        picture: './assets/images/seaCreatures/NH-Icon-acornbarnacle.png',
+        price: '600',
+        size: 'Tiny',
+        movement: 'Stationary',
+        time: 'All Day',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        spiderCrab: {
+        name: 'Spider Crab',
+        picture: './assets/images/seaCreatures/NH-Icon-spidercrab.png',
+        price: '12000',
+        size: 'Huge',
+        movement: 'Quick',
+        time: 'All Day',
+        months: 'Mar - Apr',
+        southernMonths: 'sep - Oct',
+        notes: ''
+        },
+        tigerPrawn: {
+        name: 'Tiger Prawn',
+        picture: './assets/images/seaCreatures/NH-Icon-tigerprawn.png',
+        price: '3000',
+        size: 'Small',
+        movement: 'Moderate consistent',
+        time: '4:00 pm - 9:00 am',
+        months: 'Jun - Sep',
+        southernMonths: 'Dec - Mar',
+        notes: ''
+        },
+        sweetShrimp: {
+        name: 'Sweet Shrimp',
+        picture: './assets/images/seaCreatures/NH-Icon-sweetshrimp.png',
+        price: '1400',
+        size: 'Small',
+        movement: 'Slow',
+        time: '4:00 pm - 9:00',
+        months: 'Sep - Feb',
+        southernMonths: 'Mar - Aug',
+        notes: ''
+        },
+        mantisShrimp: {
+        name: 'Mantis Shrimp',
+        picture: './assets/images/seaCreatures/NH-Icon-mantisshrimp.png',
+        price: '2500',
+        size: 'Small',
+        movement: 'Quick short lunges',
+        time: '4:00 pm - 9:00 am',
+        months: 'All Year',
+        southernMonths: 'All Year',
+        notes: ''
+        },
+        spinyLobster: {
+        name: 'Spiny Lobster',
+        picture: './assets/images/seaCreatures/NH-Icon-spinylobster.png',
+        price: '5000',
+        size: 'Large',
+        movement: 'Fast',
+        time: '9:0 pm - 4:00 am',
+        months: 'Oct - Dec',
+        southernMonths: 'Apr - Jun',
+        notes: ''
+        },
+        lobster: {
+        name: 'Lobster',
+        picture: './assets/images/seaCreatures/NH-Icon-lobster.png',
+        price: '4500',
+        size: 'Large',
+        movement: 'Quick',
+        time: 'All Day',
+        months: 'Apr - Jun & Dec - Jan',
+        southernMonths: 'Jun - Jul & Oct - Dec',
+        notes: ''
+        },
+        giantIsopod: {
+        name: 'Giant Isopod',
+        picture: './assets/images/seaCreatures/NH-Icon-giantisopod.png',
+        price: '12000',
+        size: 'Medium',
+        movement: 'Quick long lunges',
+        time: '9:00 am - 4:00 pm & 9:00 pm - 4:00 am',
+        months: 'Jul - Oct',
+        southernMonths: 'Jan - Apr',
+        notes: ''
+        },
+        horseshoeCrab: {
+        name: 'Horseshoe Crab',
+        picture: './assets/images/seaCreatures/NH-Icon-horseshoecrab.png',
+        price: '2500',
+        size: 'Medium',
+        movement: 'Quick short lunges',
+        time: '9:00 pm - 4:00 am',
+        months: 'Jul - Sep',
+        southernMonths: 'Jan - Mar',
+        notes: ''
+        },
+        seaPineapple: {
+        name: 'Sea Pineapple',
+        picture: './assets/images/seaCreatures/NH-Icon-seapineapple.png',
+        price: '1500',
+        size: 'Small',
+        movement: 'Slow long lunges',
+        time: 'All Day',
+        months: 'Apr - Aug',
+        southernMonths: 'Oct - Feb',
+        notes: ''
+        },
+        spottedGardenEel: {
+        name: 'Spotted Garden Eel',
+        picture: './assets/images/seaCreatures/NH-Icon-spottedgardeneel.png',
+        price: '1100',
+        size: 'Small',
+        movement: 'Slow consistent',
+        time: '4:00 am - 9:00 pm',
+        months: 'May - Oct',
+        southernMonths: 'Nov - Apr',
+        notes: ''
+        },
+        flatworm: {
+        name: 'Flatworm',
+        picture: './assets/images/seaCreatures/NH-Icon-flatworm.png',
+        price: '700',
+        size: 'Tiny',
+        movement: 'Slow short',
+        time: '4:00 am - 9:00 pm',
+        months: 'Aug - Sep',
+        southernMonths: 'Feb - Mar',
+        notes: ''
+        },
+        venusflowerBasket: {
+        name: 'Venus\' Flower Basket',
+        picture: './assets/images/seaCreatures/NH-Icon-venusflowerbasket.png',
+        price: '5000',
+        size: 'Medium',
+        movement: 'Quick long lunges',
+        time: 'All Day',
+        months: 'Oct - Feb',
+        southernMonths: 'Apr - Aug',
+        notes: ''
+        },
+    }
+    //#endregion
 }
-//#endregion
+
