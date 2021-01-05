@@ -4,68 +4,23 @@ const BnF = bugsAndFishList;
 
 const userData = returnDataObjectIfExistsOrCreateDataObjectIfNot();
 
-const hemiButton = document.querySelector('#hemishpere');
+const hemiButton = document.querySelector('#hemisphere');
 
 const bugsButton = document.querySelector('#bugs');
 const fishButton = document.querySelector('#fish');
 const seaCreatureButton = document.querySelector('#seaCreature');
 
+const currentAnimal = changeCurrentAnimalWhenClicked();
+
+const hemisphere = changeHemisphereWhenClicked()
+
 const monthNamesArr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-var currentMonth = 'Sep';
-// var currentMonth = monthNamesArr[new Date().getMonth()];
+var currentMonth = monthNamesArr[new Date().getMonth()];
 
-const currentAnimal = () => {
-    var currentAnimal = userData.currentAnimal;
-    bugsButton.addEventListener('click', () => {
-        if(currentAnimal != 'bugs') {
-            userData.currentAnimal = 'bugs';
-            currentAnimal = 'bugs';
-            window.localStorage.setItem('userData', JSON.stringify(userData));
-            window.location.reload(false); 
-            return currentAnimal;
-        }
-    });
-    fishButton.addEventListener('click', () => {
-        if(currentAnimal != 'fish') {
-            userData.currentAnimal = 'fish';
-            currentAnimal = 'fish';
-            window.localStorage.setItem('userData', JSON.stringify(userData));
-            window.location.reload(false); 
-            return currentAnimal;
-        }
-    });
-    seaCreatureButton.addEventListener('click', () => {
-        if(currentAnimal != 'seaCreature') {
-            userData.currentAnimal = 'seaCreature';
-            currentAnimal = 'seaCreature';
-            window.localStorage.setItem('userData', JSON.stringify(userData));
-            window.location.reload(false); 
-            return currentAnimal;
-        }
-    });
-    return currentAnimal;
-}
-const hemishpere = () => {
-    var hemi = userData.hemishpere;
-    hemiButton.addEventListener('click', () => {
-        if(hemi === 'months') {
-            userData.hemishpere = 'southernMonths';
-            hemi = 'southernMonths';
-            window.localStorage.setItem('userData', JSON.stringify(userData));
-            window.location.reload(false); 
-            return hemi;
-        } else if(hemi === 'southernMonths') {
-            userData.hemishpere = 'months';
-            hemi = 'months';
-            window.localStorage.setItem('userData', JSON.stringify(userData));
-            window.location.reload(false); 
-            return hemi;
-        }
-    })
 
-    return hemi;
-};
+
+
 
 //Real code starts here lol
 initilizePageByCallingFunctions();
@@ -73,11 +28,11 @@ initilizePageByCallingFunctions();
 function initilizePageByCallingFunctions() {
     putAnimalsIntoCategories();
     checkForClickOnAnimalCardAndAddOrRemoveItFromCaughtList();
-}
+};
 
 function putAnimalsIntoCategories() {
-    for(const j in BnF.animals[currentAnimal()]) {
-        var animal = BnF.animals[currentAnimal()][j];
+    for(const j in BnF.animals[currentAnimal]) {
+        var animal = BnF.animals[currentAnimal][j];
         if(checkIfAnimalHasBeenCaught(animal.name)) {
 
                 createAnimalCard('caught', animal);
@@ -95,7 +50,7 @@ function putAnimalsIntoCategories() {
             }
         }
     }   
-}
+};
 
 function checkForClickOnAnimalCardAndAddOrRemoveItFromCaughtList() {
     
@@ -128,9 +83,9 @@ function checkForClickOnAnimalCardAndAddOrRemoveItFromCaughtList() {
                 animal.classList.remove('caught');
                 animal.parentElement.removeChild(animal);
 
-                for(const j in BnF.animals[currentAnimal()]) {
+                for(const j in BnF.animals[currentAnimal]) {
 
-                    var ani = BnF.animals[currentAnimal()][j];
+                    var ani = BnF.animals[currentAnimal][j];
 
                     if(ani.name == animalName) {
                         if(returnTrueIfAnimalCanBeCaughtInCurrentMonth(ani)) {
@@ -158,17 +113,17 @@ function checkForClickOnAnimalCardAndAddOrRemoveItFromCaughtList() {
             }
         })
     })
-}
+};
 
 function createAnimalCard(availableCaught, animal) {
-    if(currentAnimal() == 'bugs') {
+    if(currentAnimal == 'bugs') {
         createBugCard(availableCaught, animal);
-    } else if(currentAnimal() == 'fish') {
+    } else if(currentAnimal == 'fish') {
         createFishCard(availableCaught, animal);
-    } else if(currentAnimal() == 'seaCreature') {
+    } else if(currentAnimal == 'seaCreature') {
         createSeaCreatureCard(availableCaught, animal);
     }
-}
+};
 
 function createBugCard(availableCaught, animal) {
     let animalContainer = document.createElement('div');
@@ -195,13 +150,13 @@ function createBugCard(availableCaught, animal) {
 
     let months = document.createElement('p');
     months.className = 'months';
-    months.append('Months: ' + `${animal[hemishpere()]}`);  
+    months.append('Months: ' + `${animal[hemisphere]}`);  
 
     animalContainer.append(title, img, price, location, time, months);
 
     let animalElement = document.getElementById(`${availableCaught}`);
     animalElement.append(animalContainer);
-}
+};
 
 function createFishCard(availableCaught, animal) {
     let animalContainer = document.createElement('div');
@@ -232,13 +187,13 @@ function createFishCard(availableCaught, animal) {
 
     let months = document.createElement('p');
     months.className = 'months';
-    months.append('Months: ' + `${animal[hemishpere()]}`);  
+    months.append('Months: ' + `${animal[hemisphere]}`);  
 
     animalContainer.append(title, img, price, location, size, time, months);
 
     let animalElement = document.getElementById(`${availableCaught}`);
     animalElement.append(animalContainer);
-}
+};
 
 function createSeaCreatureCard(availableCaught, animal) {
     let animalContainer = document.createElement('div');
@@ -269,18 +224,18 @@ function createSeaCreatureCard(availableCaught, animal) {
 
     let months = document.createElement('p');
     months.className = 'months';
-    months.append('Months: ' + `${animal[hemishpere()]}`);  
+    months.append('Months: ' + `${animal[hemisphere]}`);  
 
     animalContainer.append(title, img, price, movement, size, time, months);
 
     let animalElement = document.getElementById(`${availableCaught}`);
     animalElement.append(animalContainer);
-}
+};
 
 function returnTrueIfAnimalCanBeCaughtInCurrentMonth(animal) {
     const monthNamesArr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-    var animalMonths = animal[hemishpere()].split(' ');
+    var animalMonths = animal[hemisphere].split(' ');
 
     if (animalMonths.length == 1) {
         return checkCurrentMonthAgainstMonthRange(animalMonths);
@@ -308,7 +263,7 @@ function returnTrueIfAnimalCanBeCaughtInCurrentMonth(animal) {
             return checkIfAnimalAppearsInCurrentMonthInARange(monthNamesArr, animalMonths[4], animalMonths[6]);
         }
     }
-}
+};
 
 function checkIfAnimalAppearsInCurrentMonthInARange(monthNamesArr, animalMonthOne, animalMonthTwo) {
     let firstAnimalMonth = animalMonthOne;
@@ -326,7 +281,7 @@ function checkIfAnimalAppearsInCurrentMonthInARange(monthNamesArr, animalMonthOn
         return checkIfAnimalAppearsInCurrentMonthReversed(monthNamesArr, firstAnimalMonth, secondAnimalMonth);
 
     }
-}
+};
 
 function checkIfAnimalAppearsInCurrentMonthReversed(monthNamesArr, firstAnimalMonth, secondAnimalMonth) {
     let months = reverseArray(monthNamesArr);
@@ -341,13 +296,13 @@ function checkIfAnimalAppearsInCurrentMonthReversed(monthNamesArr, firstAnimalMo
     months.push(secondAnimalMonth);
 
     return checkCurrentMonthAgainstMonthRange(months);
-}
+};
 
 function checkIfAnimalAppearsInCurrentMonth(monthNamesArr, firstAnimalMonthIndex, secondAnimalMonthIndex) {
     let months = monthNamesArr.slice(firstAnimalMonthIndex, secondAnimalMonthIndex + 1);
 
     return checkCurrentMonthAgainstMonthRange(months);
-}
+};
 
 function checkCurrentMonthAgainstMonthRange(months) {
     for (let i in months) {
@@ -356,7 +311,7 @@ function checkCurrentMonthAgainstMonthRange(months) {
             return true;
         }
     }
-}
+};
 
 function reverseArray(arr) {
     var newArray = [];
@@ -364,14 +319,14 @@ function reverseArray(arr) {
         newArray.push(arr[i]);
     }
     return newArray;
-}
+};
 
 function makeNewlocalStorageObject(){
 
     var Data = {};
 
     Data.currentAnimal = 'bugs';
-    Data.hemishpere = 'months';
+    Data.hemisphere = 'months';
     Data.bugs = {};
     Data.fish = {};
     Data.seaCreature = {};
@@ -387,7 +342,7 @@ function makeNewlocalStorageObject(){
     }
 
     return JSON.stringify(Data);
-}
+};
 
 function returnDataObjectIfExistsOrCreateDataObjectIfNot() {
     if(window.localStorage.getItem('userData') == null) {
@@ -398,12 +353,65 @@ function returnDataObjectIfExistsOrCreateDataObjectIfNot() {
 
     return JSON.parse(window.localStorage.getItem('userData'));
 
-}
+};
 
 function checkIfAnimalHasBeenCaught(animalName) {
-    if(userData[currentAnimal()][animalName] == true) {
+    if(userData[currentAnimal][animalName] == true) {
         return true;
     } else {
         return false;
     }
-}
+};
+
+function changeCurrentAnimalWhenClicked() {
+    var currentAnimal = userData.currentAnimal;
+    bugsButton.addEventListener('click', () => {
+        if(currentAnimal != 'bugs') {
+            userData.currentAnimal = 'bugs';
+            currentAnimal = 'bugs';
+            window.localStorage.setItem('userData', JSON.stringify(userData));
+            window.location.reload(false); 
+            return currentAnimal;
+        }
+    });
+    fishButton.addEventListener('click', () => {
+        if(currentAnimal != 'fish') {
+            userData.currentAnimal = 'fish';
+            currentAnimal = 'fish';
+            window.localStorage.setItem('userData', JSON.stringify(userData));
+            window.location.reload(false); 
+            return currentAnimal;
+        }
+    });
+    seaCreatureButton.addEventListener('click', () => {
+        if(currentAnimal != 'seaCreature') {
+            userData.currentAnimal = 'seaCreature';
+            currentAnimal = 'seaCreature';
+            window.localStorage.setItem('userData', JSON.stringify(userData));
+            window.location.reload(false); 
+            return currentAnimal;
+        }
+    });
+    return currentAnimal;
+};
+
+function changeHemisphereWhenClicked() {
+    var hemi = userData.hemisphere;
+    hemiButton.addEventListener('click', () => {
+        if(hemi === 'months') {
+            userData.hemisphere = 'southernMonths';
+            hemi = 'southernMonths';
+            window.localStorage.setItem('userData', JSON.stringify(userData));
+            window.location.reload(false); 
+            return hemi;
+        } else if(hemi === 'southernMonths') {
+            userData.hemisphere = 'months';
+            hemi = 'months';
+            window.localStorage.setItem('userData', JSON.stringify(userData));
+            window.location.reload(false); 
+            return hemi;
+        }
+    })
+
+    return hemi;
+};
