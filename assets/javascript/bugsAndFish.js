@@ -248,7 +248,7 @@ const animals = {
         picture: './assets/images/bugs/NH-Icon-wasp.png',
         price: '2500',
         location: 'Shaking trees',
-        time: 'all day',
+        time: 'All Day',
         months: 'All Year',
         southernMonths: 'All Year',
         notes: ''
@@ -308,7 +308,7 @@ const animals = {
         picture: './assets/images/bugs/NH-Icon-cicadashell.png',
         price: '10',
         location: 'On trees',
-        time: 'all day',
+        time: 'All Day',
         months: 'Jul - Aug',
         southernMonths: 'Jan - Feb',
         notes: ''
@@ -348,7 +348,7 @@ const animals = {
         picture: './assets/images/bugs/NH-Icon-damselfly.png',
         price: '500',
         location: 'Flying',
-        time: 'all day',
+        time: 'All Day',
         months: 'Nov - Feb',
         southernMonths: 'May - Aug',
         notes: ''
@@ -368,7 +368,7 @@ const animals = {
         picture: './assets/images/bugs/NH-Icon-molecricket.png',
         price: '500',
         location: 'Underground',
-        time: 'all day',
+        time: 'All Day',
         months: 'Nov - May',
         southernMonths: 'May - Nov',
         notes: ''
@@ -408,7 +408,7 @@ const animals = {
         picture: './assets/images/bugs/NH-Icon-stinkbug.png',
         price: '120',
         location: 'On Flowers',
-        time: 'all day',
+        time: 'All Day',
         months: 'Mar - Oct',
         southernMonths: 'Sep - Apr',
         notes: ''
