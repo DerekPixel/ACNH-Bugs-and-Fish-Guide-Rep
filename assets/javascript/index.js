@@ -136,6 +136,7 @@ function createBugCard(availableCaught, animal) {
 
     let img = document.createElement('img');
     img.setAttribute('src', `${animal.picture}`);
+    img.setAttribute('alt', `Image of a ${animal.name}`);
 
     let price = document.createElement('p');
     price.className = 'price';
@@ -169,6 +170,7 @@ function createFishCard(availableCaught, animal) {
 
     let img = document.createElement('img');
     img.setAttribute('src', `${animal.picture}`);
+    img.setAttribute('alt', `Image of a ${animal.name}`);
 
     let price = document.createElement('p');
     price.className = 'price';
@@ -206,6 +208,7 @@ function createSeaCreatureCard(availableCaught, animal) {
 
     let img = document.createElement('img');
     img.setAttribute('src', `${animal.picture}`);
+    img.setAttribute('alt', `Image of a ${animal.name}`);
 
     let price = document.createElement('p');
     price.className = 'price';
