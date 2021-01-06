@@ -12,7 +12,7 @@ const seaCreatureButton = document.querySelector('#seaCreature');
 
 const currentAnimal = changeCurrentAnimalWhenClicked();
 
-const hemisphere = changeHemisphereWhenClicked()
+const hemisphere = changeHemisphereWhenClicked();
 
 const monthNamesArr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
@@ -26,6 +26,7 @@ var currentMonth = monthNamesArr[new Date().getMonth()];
 initilizePageByCallingFunctions();
 
 function initilizePageByCallingFunctions() {
+    initilizeHemisphereText();
     putAnimalsIntoCategories();
     checkForClickOnAnimalCardAndAddOrRemoveItFromCaughtList();
 };
@@ -127,10 +128,10 @@ function createAnimalCard(availableCaught, animal) {
 
 function createBugCard(availableCaught, animal) {
     let animalContainer = document.createElement('div');
-    animalContainer.className = `animal-card ${availableCaught}`;
+    animalContainer.className = `animal-card clickable ${availableCaught}`;
     animalContainer.id = 'animal-card';
 
-    let title = document.createElement('h2');
+    let title = document.createElement('h3');
     title.append(animal.name);
 
     let img = document.createElement('img');
@@ -138,19 +139,19 @@ function createBugCard(availableCaught, animal) {
 
     let price = document.createElement('p');
     price.className = 'price';
-    price.append('Price: ' + animal.price);
+    price.append('💰: ' + animal.price);
 
     let location = document.createElement('p');
     location.className = 'location';
-    location.append('Location: ' + `${animal.location}`);
+    location.append('🗺️: ' + `${animal.location}`);
 
     let time = document.createElement('p');
     time.className = 'time';
-    time.append('Times: ' + `${animal.time}`);
+    time.append('🕐: ' + `${animal.time}`);
 
     let months = document.createElement('p');
     months.className = 'months';
-    months.append('Months: ' + `${animal[hemisphere]}`);  
+    months.append('📆: ' + `${animal[hemisphere]}`);  
 
     animalContainer.append(title, img, price, location, time, months);
 
@@ -160,10 +161,10 @@ function createBugCard(availableCaught, animal) {
 
 function createFishCard(availableCaught, animal) {
     let animalContainer = document.createElement('div');
-    animalContainer.className = `animal-card ${availableCaught}`;
+    animalContainer.className = `animal-card clickable ${availableCaught}`;
     animalContainer.id = 'animal-card' //`${animal.name}`
 
-    let title = document.createElement('h2');
+    let title = document.createElement('h3');
     title.append(animal.name);
 
     let img = document.createElement('img');
@@ -171,23 +172,23 @@ function createFishCard(availableCaught, animal) {
 
     let price = document.createElement('p');
     price.className = 'price';
-    price.append('Price: ' + animal.price);
+    price.append('💰: ' + animal.price);
 
     let location = document.createElement('p');
     location.className = 'location';
-    location.append('Location: ' + `${animal.location}`);
+    location.append('🗺️: ' + `${animal.location}`);
 
     let size = document.createElement('p');
     size.className = 'size';
-    size.append('Size: ' + animal.size);
+    size.append('🔺: ' + animal.size);
 
     let time = document.createElement('p');
     time.className = 'time';
-    time.append('Times: ' + `${animal.time}`);
+    time.append('🕐: ' + `${animal.time}`);
 
     let months = document.createElement('p');
     months.className = 'months';
-    months.append('Months: ' + `${animal[hemisphere]}`);  
+    months.append('📆: ' + `${animal[hemisphere]}`);  
 
     animalContainer.append(title, img, price, location, size, time, months);
 
@@ -197,10 +198,10 @@ function createFishCard(availableCaught, animal) {
 
 function createSeaCreatureCard(availableCaught, animal) {
     let animalContainer = document.createElement('div');
-    animalContainer.className = `animal-card ${availableCaught}`;
+    animalContainer.className = `animal-card clickable ${availableCaught}`;
     animalContainer.id = 'animal-card' //`${animal.name}`
 
-    let title = document.createElement('h2');
+    let title = document.createElement('h3');
     title.append(animal.name);
 
     let img = document.createElement('img');
@@ -208,23 +209,23 @@ function createSeaCreatureCard(availableCaught, animal) {
 
     let price = document.createElement('p');
     price.className = 'price';
-    price.append('Price: ' + animal.price);
+    price.append('💰: ' + animal.price);
 
     let movement = document.createElement('p');
     movement.className = 'movement';
-    movement.append('movement: ' + `${animal.movement}`);
+    movement.append('🧭: ' + `${animal.movement}`);
 
     let size = document.createElement('p');
     size.className = 'size';
-    size.append('Size: ' + animal.size);
+    size.append('🔺: ' + animal.size);
 
     let time = document.createElement('p');
     time.className = 'time';
-    time.append('Times: ' + `${animal.time}`);
+    time.append('🕐: ' + `${animal.time}`);
 
     let months = document.createElement('p');
     months.className = 'months';
-    months.append('Months: ' + `${animal[hemisphere]}`);  
+    months.append('📆: ' + `${animal[hemisphere]}`);  
 
     animalContainer.append(title, img, price, movement, size, time, months);
 
@@ -414,4 +415,16 @@ function changeHemisphereWhenClicked() {
     })
 
     return hemi;
+};
+
+function initilizeHemisphereText() {
+    var hemi = userData.hemisphere;
+    var hsphere = document.querySelector('#hemisphere');
+
+    if(hemi == 'months') {
+        hsphere.prepend('Northern ');
+    } else {
+        hsphere.prepend('Southern ');
+    }
+
 };
