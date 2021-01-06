@@ -3,32 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@300&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./assets/stylesheets/main.css">
-    <title>ACNH Guide</title>
+    <title>ACNH Tracker</title>
 </head>
     <body>
 
-        <div id="hemisphere">Hemisphere</div>
+        <header>
 
-        <div id="bugs">bugs</div>
+            <h1>ACNH Tracker</h1>
 
-        <div id="fish">fish</div>
-
-        <div id="seaCreature">sea creature</div>
-        <h3>available-now</h3>
-        <section id="available-now">
-
-        </section>
-        <h3>not-available</h3>
-        <section id="not-available">
-
-        </section>
-        <h3>caught</h3>
-        <section id="caught">
-            
-        </section>
+            <nav>
     
+                <div class="clickable" id="bugs">Bugs</div>
+    
+                <div class="clickable" id="fish">Fish</div>
+    
+                <div class="clickable" id="seaCreature">Sea Creatures</div>
+            </nav>
 
+            <section id="settings">
+                <div class="clickable" id="hemisphere">Hemisphere</div>
+            </section>
+
+            
+        </header>
+
+        <main id="main">
+            <h2>available this month</h2>
+            <small>Tap/click a Creature's card to mark it as caught</small>
+            <section class="animals" id="available-now">
+    
+            </section>
+            <h2>not available</h2>
+            <section class="animals" id="not-available">
+    
+            </section>
+            <h2>caught</h2>
+            <section class="animals" id="caught">
+                
+            </section>
+        </main>
     
         <script type="module" src="./assets/javascript/index.js"></script>
     </body>
