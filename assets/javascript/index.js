@@ -16,11 +16,7 @@ const hemisphere = changeHemisphereWhenClicked();
 
 const monthNamesArr = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-var currentMonth = monthNamesArr[new Date().getMonth()];
-
-
-
-
+const currentMonth = monthNamesArr[new Date().getMonth()];
 
 //Real code starts here lol
 initilizePageByCallingFunctions();
@@ -36,18 +32,15 @@ function putAnimalsIntoCategories() {
         var animal = BnF.animals[currentAnimal][j];
         if(checkIfAnimalHasBeenCaught(animal.name)) {
 
-                createAnimalCard('caught', animal);
-
+            createAnimalCard('caught', animal);
         } else {
 
             if (returnTrueIfAnimalCanBeCaughtInCurrentMonth(animal)) {
 
                 createAnimalCard('available-now', animal);
-
             } else {
 
                 createAnimalCard('not-available', animal);
-
             }
         }
     }   
@@ -64,18 +57,6 @@ function checkForClickOnAnimalCardAndAddOrRemoveItFromCaughtList() {
         animal.addEventListener('click', () => {
 
             var animalName = animal.childNodes[0].childNodes[0].nodeValue;
-
-            var setLocalStorageAnimalBoolean = (bool) => {
-                
-                if (userData.bugs.hasOwnProperty(animalName)) userData.bugs[animalName] = bool;
-                
-                if (userData.fish.hasOwnProperty(animalName)) userData.fish[animalName] = bool;
-
-                if (userData.seaCreature.hasOwnProperty(animalName)) userData.seaCreature[animalName] = bool;
-
-                window.localStorage.setItem('userData', JSON.stringify(userData));
-
-            }
 
             if(animal.classList.contains('caught')) {
 
@@ -97,37 +78,35 @@ function checkForClickOnAnimalCardAndAddOrRemoveItFromCaughtList() {
                             animalNotAvailable.appendChild(animal);
                         }
                     }
-
                 }
-            } else {
-                if((animal.classList.contains('available-now')) || (animal.classList.contains('not-available'))) {
+            } else if((animal.classList.contains('available-now')) || (animal.classList.contains('not-available'))) {
 
-                    setLocalStorageAnimalBoolean(true);
+                setLocalStorageAnimalBoolean(true);
 
-                    animal.classList.remove('available-now', 'not-available');
-                    animal.parentElement.removeChild(animal);
+                animal.classList.remove('available-now', 'not-available');
+                animal.parentElement.removeChild(animal);
 
-                    animal.classList.add('caught');
-                    animalCaught.appendChild(animal);
-
-                }
+                animal.classList.add('caught');
+                animalCaught.appendChild(animal);
             }
         })
     })
 };
 
-function createAnimalCard(availableCaught, animal) {
-    if(currentAnimal == 'bugs') {
-        createBugCard(availableCaught, animal);
-    } else if(currentAnimal == 'fish') {
-        createFishCard(availableCaught, animal);
-    } else if(currentAnimal == 'seaCreature') {
-        createSeaCreatureCard(availableCaught, animal);
-    }
+function setLocalStorageAnimalBoolean(bool) {
+                
+    if (userData.bugs.hasOwnProperty(animalName)) userData.bugs[animalName] = bool;
+    
+    if (userData.fish.hasOwnProperty(animalName)) userData.fish[animalName] = bool;
+
+    if (userData.seaCreature.hasOwnProperty(animalName)) userData.seaCreature[animalName] = bool;
+
+    window.localStorage.setItem('userData', JSON.stringify(userData));
 };
 
-function createBugCard(availableCaught, animal) {
-    let animalContainer = document.createElement('div');
+function createAnimalCard(availableCaught, animal) {
+
+    var animalContainer = document.createElement('div');
     animalContainer.className = `animal-card clickable ${availableCaught}`;
     animalContainer.id = 'animal-card';
 
@@ -138,102 +117,35 @@ function createBugCard(availableCaught, animal) {
     img.setAttribute('src', `${animal.picture}`);
     img.setAttribute('alt', `Image of a ${animal.name}`);
 
-    let price = document.createElement('p');
-    price.className = 'price';
-    price.append('💰: ' + animal.price);
+    let price = makeAnimalElementWithClass('p', 'price', '💰', animal);
 
-    let location = document.createElement('p');
-    location.className = 'location';
-    location.append('🗺️: ' + `${animal.location}`);
-
-    let time = document.createElement('p');
-    time.className = 'time';
-    time.append('🕐: ' + `${animal.time}`);
+    let time = makeAnimalElementWithClass('p', 'time', '🕐', animal)
 
     let months = document.createElement('p');
     months.className = 'months';
-    months.append('📆: ' + `${animal[hemisphere]}`);  
+    months.append('📆: ' + `${animal[hemisphere]}`); 
 
-    animalContainer.append(title, img, price, location, time, months);
+    if(currentAnimal == 'bugs') {
 
-    let animalElement = document.getElementById(`${availableCaught}`);
-    animalElement.append(animalContainer);
-};
+        let location = makeAnimalElementWithClass('p', 'location', '🗺️', animal);
+        animalContainer.append(title, img, price, location, time, months);
+        appendAnimalContainerToAppropriateAnimalElement(availableCaught, animalContainer);
 
-function createFishCard(availableCaught, animal) {
-    let animalContainer = document.createElement('div');
-    animalContainer.className = `animal-card clickable ${availableCaught}`;
-    animalContainer.id = 'animal-card' //`${animal.name}`
+    } else if(currentAnimal == 'fish') {
 
-    let title = document.createElement('h3');
-    title.append(animal.name);
+        let location = makeAnimalElementWithClass('p', 'location', '🗺️', animal);
+        let size = makeAnimalElementWithClass('p', 'size', '📈', animal);
+        animalContainer.append(title, img, price, location, size, time, months);
+        appendAnimalContainerToAppropriateAnimalElement(availableCaught, animalContainer);
 
-    let img = document.createElement('img');
-    img.setAttribute('src', `${animal.picture}`);
-    img.setAttribute('alt', `Image of a ${animal.name}`);
+    } else if(currentAnimal == 'seaCreature') {
+        
+        let size = makeAnimalElementWithClass('p', 'size', '📈', animal);
+        let movement = makeAnimalElementWithClass('p', 'movement', '🧭', animal);
+        animalContainer.append(title, img, price, movement, size, time, months);
+        appendAnimalContainerToAppropriateAnimalElement(availableCaught, animalContainer);
 
-    let price = document.createElement('p');
-    price.className = 'price';
-    price.append('💰: ' + animal.price);
-
-    let location = document.createElement('p');
-    location.className = 'location';
-    location.append('🗺️: ' + `${animal.location}`);
-
-    let size = document.createElement('p');
-    size.className = 'size';
-    size.append('🔺: ' + animal.size);
-
-    let time = document.createElement('p');
-    time.className = 'time';
-    time.append('🕐: ' + `${animal.time}`);
-
-    let months = document.createElement('p');
-    months.className = 'months';
-    months.append('📆: ' + `${animal[hemisphere]}`);  
-
-    animalContainer.append(title, img, price, location, size, time, months);
-
-    let animalElement = document.getElementById(`${availableCaught}`);
-    animalElement.append(animalContainer);
-};
-
-function createSeaCreatureCard(availableCaught, animal) {
-    let animalContainer = document.createElement('div');
-    animalContainer.className = `animal-card clickable ${availableCaught}`;
-    animalContainer.id = 'animal-card' //`${animal.name}`
-
-    let title = document.createElement('h3');
-    title.append(animal.name);
-
-    let img = document.createElement('img');
-    img.setAttribute('src', `${animal.picture}`);
-    img.setAttribute('alt', `Image of a ${animal.name}`);
-
-    let price = document.createElement('p');
-    price.className = 'price';
-    price.append('💰: ' + animal.price);
-
-    let movement = document.createElement('p');
-    movement.className = 'movement';
-    movement.append('🧭: ' + `${animal.movement}`);
-
-    let size = document.createElement('p');
-    size.className = 'size';
-    size.append('🔺: ' + animal.size);
-
-    let time = document.createElement('p');
-    time.className = 'time';
-    time.append('🕐: ' + `${animal.time}`);
-
-    let months = document.createElement('p');
-    months.className = 'months';
-    months.append('📆: ' + `${animal[hemisphere]}`);  
-
-    animalContainer.append(title, img, price, movement, size, time, months);
-
-    let animalElement = document.getElementById(`${availableCaught}`);
-    animalElement.append(animalContainer);
+    }
 };
 
 function returnTrueIfAnimalCanBeCaughtInCurrentMonth(animal) {
@@ -277,13 +189,9 @@ function checkIfAnimalAppearsInCurrentMonthInARange(monthNamesArr, animalMonthOn
     let secondAnimalMonthIndex = monthNamesArr.indexOf(secondAnimalMonth);
 
     if (firstAnimalMonthIndex < secondAnimalMonthIndex) {
-
         return checkIfAnimalAppearsInCurrentMonth(monthNamesArr, firstAnimalMonthIndex, secondAnimalMonthIndex);
-
     } else {
-
         return checkIfAnimalAppearsInCurrentMonthReversed(monthNamesArr, firstAnimalMonth, secondAnimalMonth);
-
     }
 };
 
@@ -304,7 +212,6 @@ function checkIfAnimalAppearsInCurrentMonthReversed(monthNamesArr, firstAnimalMo
 
 function checkIfAnimalAppearsInCurrentMonth(monthNamesArr, firstAnimalMonthIndex, secondAnimalMonthIndex) {
     let months = monthNamesArr.slice(firstAnimalMonthIndex, secondAnimalMonthIndex + 1);
-
     return checkCurrentMonthAgainstMonthRange(months);
 };
 
@@ -356,7 +263,6 @@ function returnDataObjectIfExistsOrCreateDataObjectIfNot() {
     }
 
     return JSON.parse(window.localStorage.getItem('userData'));
-
 };
 
 function checkIfAnimalHasBeenCaught(animalName) {
@@ -371,31 +277,27 @@ function changeCurrentAnimalWhenClicked() {
     var currentAnimal = userData.currentAnimal;
     bugsButton.addEventListener('click', () => {
         if(currentAnimal != 'bugs') {
-            userData.currentAnimal = 'bugs';
-            currentAnimal = 'bugs';
-            window.localStorage.setItem('userData', JSON.stringify(userData));
-            window.location.reload(false); 
-            return currentAnimal;
+            return updateCurrentAnimalAndReloadPage('bugs', currentAnimal);
         }
     });
     fishButton.addEventListener('click', () => {
         if(currentAnimal != 'fish') {
-            userData.currentAnimal = 'fish';
-            currentAnimal = 'fish';
-            window.localStorage.setItem('userData', JSON.stringify(userData));
-            window.location.reload(false); 
-            return currentAnimal;
+            return updateCurrentAnimalAndReloadPage('fish', currentAnimal);
         }
     });
     seaCreatureButton.addEventListener('click', () => {
         if(currentAnimal != 'seaCreature') {
-            userData.currentAnimal = 'seaCreature';
-            currentAnimal = 'seaCreature';
-            window.localStorage.setItem('userData', JSON.stringify(userData));
-            window.location.reload(false); 
-            return currentAnimal;
+            return updateCurrentAnimalAndReloadPage('seaCreature', currentAnimal);
         }
     });
+    return currentAnimal;
+};
+
+function updateCurrentAnimalAndReloadPage(animalString, currentAnimal) {
+    userData.currentAnimal = animalString;
+    currentAnimal = animalString;
+    window.localStorage.setItem('userData', JSON.stringify(userData));
+    window.location.reload(false); 
     return currentAnimal;
 };
 
@@ -429,5 +331,17 @@ function initilizeHemisphereText() {
     } else {
         hsphere.prepend('Southern ');
     }
+};
 
+function makeAnimalElementWithClass(element, classString, emoji, animal) {
+    let elementWtihClass = document.createElement(`${element}`);
+    elementWtihClass.className = `${classString}`;
+    elementWtihClass.append(`${emoji}: ${animal[classString]}`);
+
+    return elementWtihClass;
+};
+
+function appendAnimalContainerToAppropriateAnimalElement(availableCaught, animalContainer) {
+    let animalElement = document.getElementById(`${availableCaught}`);
+    animalElement.append(animalContainer);
 };
