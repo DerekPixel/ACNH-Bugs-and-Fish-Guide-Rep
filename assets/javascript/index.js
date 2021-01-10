@@ -60,7 +60,7 @@ function checkForClickOnAnimalCardAndAddOrRemoveItFromCaughtList() {
 
             if(animal.classList.contains('caught')) {
 
-                setLocalStorageAnimalBoolean(false);
+                setLocalStorageAnimalBoolean(false, animalName);
 
                 animal.classList.remove('caught');
                 animal.parentElement.removeChild(animal);
@@ -81,7 +81,7 @@ function checkForClickOnAnimalCardAndAddOrRemoveItFromCaughtList() {
                 }
             } else if((animal.classList.contains('available-now')) || (animal.classList.contains('not-available'))) {
 
-                setLocalStorageAnimalBoolean(true);
+                setLocalStorageAnimalBoolean(true, animalName);
 
                 animal.classList.remove('available-now', 'not-available');
                 animal.parentElement.removeChild(animal);
@@ -93,7 +93,7 @@ function checkForClickOnAnimalCardAndAddOrRemoveItFromCaughtList() {
     })
 };
 
-function setLocalStorageAnimalBoolean(bool) {
+function setLocalStorageAnimalBoolean(bool, animalName) {
                 
     if (userData.bugs.hasOwnProperty(animalName)) userData.bugs[animalName] = bool;
     
